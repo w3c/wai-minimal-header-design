@@ -1,2 +1,3 @@
-# wai-technical-guidance-redesign
-Repository for work regarding the redesign of technical guidance that supplements WCAG
+# WCAG Supporting Documents
+
+Repository for work regarding the redesign of the [supporting documents for WCAG](https://www.w3.org/TR/WCAG21/#wcag-2-1-supporting-documents).
