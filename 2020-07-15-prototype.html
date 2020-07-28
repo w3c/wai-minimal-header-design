@@ -47,6 +47,13 @@
         padding: 2em 0;
         background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
       }
+      .nav {
+        min-height: 3em;
+      }
+      .nav ul {
+        align-items: center;
+        height: 100%;
+      }
       .nav__item {
         list-style: none;
         margin: 0;
@@ -55,7 +62,7 @@
       .nav__item a {
         display: block;
         font-size: 0.85em;
-        padding: 1em;
+        padding: .5em 1em;
         text-decoration: none;
         background-color: #d0e1f1; /* cloudy-subtle */
         color: inherit;
@@ -156,6 +163,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" 
                 </span>
               </a>
             </li>
+            <li class="nav__item">
+              <a href="#">About Techniques</a>
+            </li>
           </ul>
         </nav>
         <section class="app-content svelte-1ecbihu" aria-label="Main content">
@@ -169,7 +179,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" 
             aria-hidden="true"
             data-svnav-router="1"
           ></div>
-          <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">H46</span> Using ol, ul and dl for lists or groups of links</h1>
+          <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Technique H48</span> Using ol, ul and dl for lists or groups of links</h1>
          <section id="description">
             <h2>Description</h2>
             <p>The objective of this technique is to create lists of related items using list elements
@@ -307,56 +317,7 @@ ul.navigation li {
                </ul>
                
             </section>
-     <section id="important-information">
-         <h2>Important Information about Techniques</h2>
-         <p>See <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-techniques">Understanding Techniques for WCAG Success Criteria</a> for important information about the usage of these informative techniques and how
-            they relate to the normative WCAG 2.1 success criteria. The Applicability section
-            explains the scope of the technique, and the presence of techniques for a specific
-            technology does not imply that the technology can be used in all situations to create
-            content that meets WCAG 2.1.
-         </p>
-      </section>         </section>
-          <nav class="pager" aria-label="Previous/Next Principle">
-            <ul>
-              <li class="pager--item previous svelte-7nwocy">
-                <a href="/WAI/atag/report-tool/about"
-                  ><svg
-                    focusable="false"
-                    aria-hidden="true"
-                    class="icon-arrow-right pager--item-icon"
-                  >
-                    <use
-                      xlink:href="https://w3.org/WAI/atag/report-tool/images/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
-                  <span class="pager--item-text"
-                    ><span class="pager--item-text-direction svelte-7nwocy"
-                      >previous:</span
-                    >
-                    <span class="pager--item-text-target">H46: Using noembed with embed</span></span
-                  ></a
-                >
-              </li>              <li class="pager--item next svelte-7nwocy">
-                <a href="/WAI/atag/report-tool/about"
-                  ><svg
-                    focusable="false"
-                    aria-hidden="true"
-                    class="icon-arrow-right pager--item-icon"
-                  >
-                    <use
-                      xlink:href="https://w3.org/WAI/atag/report-tool/images/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
-                  <span class="pager--item-text"
-                    ><span class="pager--item-text-direction svelte-7nwocy"
-                      >next:</span
-                    >
-                    <span class="pager--item-text-target">H49: Using semantic markup to mark emphasized or special text</span></span
-                  ></a
-                >
-              </li>
-            </ul>
-          </nav>
+           </section>
         </section>
         <aside
           class="your-report svelte-60ir8u your-report--expanded sidebar"
@@ -364,22 +325,25 @@ ul.navigation li {
         >
         <style>.sidebar ul { padding: 0;} .sidebar li { margin-left: 1em; } </style>
         <h2 style="margin-top: 0">About this document</h2>
+        <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion.</p>
         <style>dd { margin-left: 0!important; }</style>
         <dl>
-          <dt>Type of technique</dt>
-          <dd>Sufficient (not required <span aria-hidden="true" class="more-info__icon" onclick="alert('explains in tooltip what normative is'); return false">
+          <dt>Type of technique <span aria-hidden="true" class="more-info__icon" onclick="alert('explains in tooltip what normative is'); return false">
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
                   <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
                 </svg>
-                </span>)</dd>
+                </span></dt>
+          <dd>Sufficient</dd>
           <dt>Related success criterion</dt>
           <dd><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1#info-and-relationships">1.3.1 Info and relationships</a></dd>
+          <dt>Related test rules <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: .8em">
+                  <path fill="black" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                </svg></dt>
+            <dd><a href="2020-07-15-prototype-act.html">HTML page has title</a></dd>
+            <dt>Related Techniques</dt>
+            <dd><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H40">H40: Using description lists</a></dd>
         </dl>
-        <h2>Related Techniques</h2>
-        <ul>
-          <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H40">H40: Using description lists</a></li>
-        </ul>
-            <h2>Other sources</h2>
+            <h3>Other sources</h3>
             <p style="margin-top: -.5em; margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
             <ul>
                

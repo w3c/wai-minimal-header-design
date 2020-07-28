@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prototype: ACT rule| W3C WAI</title>
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/assets/css/style.css?1573220675560713000"
+    />
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/atag/report-tool/build/bundle.css"
+    />
+    <script
+      type="text/javascript"
+      async=""
+      defer=""
+      src="//www.w3.org/analytics/piwik/piwik.js"
+    ></script>
+    <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
+    <style>
+      :target {
+        scroll-margin-top: 5rem;
+      }
+      @media (min-width: 60em) {
+        .default-grid {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-columns: minmax(16px, 1fr) (minmax(0, 50px)) [2]
+            (minmax(0, 110px)) [6] minmax(16px, 1fr);
+          grid-template-columns:
+            [complete-start] minmax(16px, 1fr) [navigation-start] repeat(
+              2,
+              minmax(0, 50px)
+            )
+            [navigation-end content-start] repeat(6, minmax(0, 110px))
+            [content-end] minmax(16px, 1fr)
+            [complete-end];
+        }
+        #conformance-tool {
+          padding: 0;
+        }
+      }
+      main {
+        display: block;
+        padding: 2em 0;
+        background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
+      }
+      .nav {
+        min-height: 3em;
+      }
+      .nav ul {
+        align-items: center;
+        height: 100%;
+      }
+      .nav__item {
+        list-style: none;
+        margin: 0;
+        text-decoration: none;
+      }
+      .nav__item a {
+        display: block;
+        font-size: 0.85em;
+        padding: .5em 1em;
+        text-decoration: none;
+        background-color: #d0e1f1; /* cloudy-subtle */
+        color: inherit;
+        white-space: nowrap;
+        transition-duration: 0.1s;
+        border-bottom: 1px solid transparent;
+      }
+      .nav__item .active {
+        background-color: #fff; /* body-bg */
+        border-bottom: 1px solid #fff;
+      }
+      .nav__item a:focus {
+        outline-offset: -0.5em;
+      }
+      .tool-header {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 8;
+        -ms-grid-row: 1;
+        grid-column: 2 / 10;
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .tool-header a {
+        text-decoration: none;
+      }
+      .tool-header-name {
+        font-size: 1.125em;
+        white-space: nowrap;
+      }
+      @media (min-width: 60em) {
+        .tool-header-name {
+          font-size: 1.5em;
+        }
+      }
+      .tool-header-logo {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+      .tool-header-logo img {
+        display: block;
+        margin: 0.75em 0 0.75em 0.5em;
+        height: 1.5em;
+      }
+      @media (min-width: 60em) {
+        .tool-header-logo img {
+          height: 2em;
+        }
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <link       rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" />
+  </head>
+  <body>
+    <header id="site-header" class="default-grid with-gap">
+      <div class="tool-header">
+        <span class="tool-header-name">WCAG: ACT test rules</span>
+        <div class="tool-header-logo">
+          <a href="http://w3.org/">
+            <img
+              alt="W3C"
+              src="https://w3.org/WAI/atag/report-tool/images/w3c.svg"
+              width="92"
+              height="44"
+            />
+          </a>
+          <a href="http://w3.org/WAI/">
+            <img
+              alt="Web Accessibility Initiative"
+              src="https://w3.org//WAI/atag/report-tool/images/wai.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="conformance-tool" class="default-grid leftcol">
+        <!-- app 'renders' here -->
+        <div
+          style="display: none;"
+          aria-hidden="true"
+          data-svnav-router="0"
+        ></div>
+        <nav class="nav svelte-3wzt7m" aria-label="Steps">
+          <ul class="svelte-3wzt7m">
+            <li class="nav__item">
+              <a href="#">All rules</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">All supporting documents 
+                <style>.more-info__icon { display: inline-block; vertical-align: middle; }</style>
+                <span aria-hidden="true" class="more-info__icon" onclick="alert('navigates to page that explains what kind of supporting documents there are'); return false">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                  <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                </svg>
+                </span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#">About ACT Rules</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="app-content svelte-1ecbihu" aria-label="Main content">
+          <div
+            style="display: none;"
+            aria-hidden="true"
+            data-svnav-route-start="0"
+          ></div>
+          <div
+            style="display: none;"
+            aria-hidden="true"
+            data-svnav-router="1"
+          ></div>
+          <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Rule: </span> 
+HTML page has title</h1>
+       
+      <h2 id="description">Description</h2>
+
+<p>This rule checks that an HTML page has a title.</p>
+
+<h2 id="applicability">Applicability</h2>
+
+<p>The root element of the <a href="https://www.w3.org/TR/WCAG21/#dfn-web-page-s">web page</a>, if it is an <code class="highlighter-rouge">html</code> element.</p>
+
+<p><strong>Note</strong>: Documents embedded into other documents, such as through <code class="highlighter-rouge">iframe</code> or <code class="highlighter-rouge">object</code> elements are not applicable because they are not web pages according to the definition in WCAG.</p>
+<h2>Accessibility Requirements Mapping</h2>
+<p><a href="#">2.4.2 Page Titled (Level A)</a> </p><ul><li><strong>Required for conformance</strong> to WCAG 2.0 and above on level A and above</li><li>Outcome mapping:
+              <ul>
+                <li>Any failed outcomes: success criterion is not satisfied</li>
+                <li>All passed outcomes: success criterion needs further testing</li>
+                <li>An inapplicable outcome: success criterion needs further testing</li>
+              </ul>
+            </li></ul>
+<h2 id="expectation-1">Expectation 1</h2>
+
+<p>Each target element has at least one <a href="https://dom.spec.whatwg.org/#concept-tree-descendant">descendant</a> that is an HTML <code class="highlighter-rouge">title</code> element.</p>
+
+<p><strong>Note</strong>: The <code class="highlighter-rouge">title</code> element exists in other namespaces such as SVG. These are not HTML title elements and should be ignored for this rule.</p>
+
+<p><strong>Note</strong>: The <a href="https://www.w3.org/TR/html52/document-metadata.html#the-title-element">HTML 5.2 specification</a> requires that a document only has one title element, and that it is a child of the head element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the head element. Because of this, neither of these validation issues causes a conformance problem for WCAG.</p>
+
+<h2 id="expectation-2">Expectation 2</h2>
+
+<p>For each target element, the first HTML <code class="highlighter-rouge">title</code> element that is a <a href="https://dom.spec.whatwg.org/#concept-tree-descendant">descendant</a> of the <a href="https://dom.spec.whatwg.org/#document-element">document element</a> has <a href="https://dom.spec.whatwg.org/#concept-tree-child">children</a> that are <a href="https://dom.spec.whatwg.org/#text">text nodes</a> that are not only <a href="#whitespace">whitespace</a>.</p>
+
+<h2 id="assumptions">Assumptions</h2>
+
+<p><em>There are currently no assumptions</em></p>
+
+<h2 id="accessibility-support">Accessibility Support</h2>
+
+<p><em>There are no major accessibility support issues known for this rule.</em></p>
+
+<h2 id="background">Background</h2>
+
+<ul>
+  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled">Understanding Success Criterion 2.4.2: Page Titled</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G88">G88: Providing descriptive titles for Web pages</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H25">H25: Providing a title using the title element</a></li>
+</ul>
+
+<h2 id="test-cases">Test Cases</h2>
+
+<h3 id="passed">Passed</h3>
+
+<h4 id="passed-example-1">Passed Example 1</h4>
+
+<p>This page has a <code class="highlighter-rouge">title</code> with content.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;</span>This page has a title<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="passed-example-2">Passed Example 2</h4>
+
+<p>This page <code class="highlighter-rouge">title</code> element is for the entire page, including content in the <code class="highlighter-rouge">iframe</code> without its own <code class="highlighter-rouge">title</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;</span>This page gives a title to an iframe<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"/test-assets/sc2-4-2-title-page-without-title.html"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="passed-example-3">Passed Example 3</h4>
+
+<p>This page has two <code class="highlighter-rouge">title</code> elements.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Title of the page.<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Title of the page.<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="passed-example-4">Passed Example 4</h4>
+
+<p>The <code class="highlighter-rouge">title</code> is in the <code class="highlighter-rouge">body</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Title of the page.<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="passed-example-5">Passed Example 5</h4>
+
+<p>The first <code class="highlighter-rouge">title</code> element has content.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Title of the page.<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="passed-example-6">Passed Example 6</h4>
+
+<p>The <code class="highlighter-rouge">title</code> only contains characters that are not letters or numbers.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;</span>#$@<span class="err">&amp;</span>%*!<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="failed">Failed</h3>
+
+<h4 id="failed-example-1">Failed Example 1</h4>
+
+<p>The page has no <code class="highlighter-rouge">title</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;h1&gt;</span>this page has no title<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="failed-example-2">Failed Example 2</h4>
+
+<p>The <code class="highlighter-rouge">title</code> element is empty.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="failed-example-3">Failed Example 3</h4>
+
+<p>The page has no <code class="highlighter-rouge">title</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"/test-assets/sc2-4-2-title-page-with-title.html"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="failed-example-4">Failed Example 4</h4>
+
+<p>The first <code class="highlighter-rouge">title</code> element is empty.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Title of the page.<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="failed-example-5">Failed Example 5</h4>
+
+<p>The <code class="highlighter-rouge">title</code> only contains a separator character.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;title&gt;</span> <span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="inapplicable">Inapplicable</h3>
+
+<h4 id="inapplicable-example-1">Inapplicable Example 1</h4>
+
+<p>This rule is not applicable to <code class="highlighter-rouge">svg</code> elements.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>This is an SVG<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<h2 id="glossary">Glossary</h2>
+
+<h3 id="outcome">Outcome</h3>
+
+<p>A conclusion that comes from evaluating an ACT Rule on a <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> or one of its constituent <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. An outcome can be one of the three following types:</p>
+
+<ul>
+  <li><strong>Inapplicable:</strong> No part of the test subject matches the applicability</li>
+  <li><strong>Passed:</strong> A <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a> meets all expectations</li>
+  <li><strong>Failed:</strong> A <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a> does not meet all expectations</li>
+</ul>
+
+<p><strong>Note:</strong> A rule has one <code class="highlighter-rouge">passed</code> or <code class="highlighter-rouge">failed</code> outcome for every <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. When there are no test targets the rule has one inapplicable outcome. This means that each <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> will have one or more outcomes.</p>
+
+<p><strong>Note:</strong> Implementers using the <a href="https://www.w3.org/TR/EARL10-Schema/">EARL10-Schema</a> can express the outcome with the <a href="https://www.w3.org/TR/EARL10-Schema/#outcome">outcome property</a>. In addition to <code class="highlighter-rouge">passed</code>, <code class="highlighter-rouge">failed</code> and <code class="highlighter-rouge">inapplicable</code>, EARL 1.0 also defined an <code class="highlighter-rouge">incomplete</code> outcome. While this cannot be the outcome of an ACT Rule when applied in its entirety, it often happens that rules are only partially evaluated. For example, when applicability was automated, but the expectations have to be evaluated manually. Such “interim” results can be expressed with the incomplete outcome.</p>
+
+<h3 id="whitespace">Whitespace</h3>
+
+<p>Characters that have the Unicode “White_Space” property in the <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode properties list</a>.</p>
+
+<p>This includes:</p>
+
+<ul>
+  <li>all characters in the <a href="https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153">Unicode Separator categories</a>, and</li>
+  <li>the following characters in the <a href="https://www.unicode.org/versions/Unicode11.0.0/ch04.pdf#G134153">Other, Control</a> category:
+    <ul>
+      <li>Character tabulation (<code class="highlighter-rouge">U+0009</code>)</li>
+      <li>Line Feed (LF) (<code class="highlighter-rouge">U+000A</code>)</li>
+      <li>Line Tabulation (<code class="highlighter-rouge">U+000B</code>)</li>
+      <li>Form Feed (FF) (<code class="highlighter-rouge">U+000C</code>)</li>
+      <li>Carriage Return (CR) (<code class="highlighter-rouge">U+000D</code>)</li>
+      <li>Next Line (NEL) (<code class="highlighter-rouge">U+0085</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<h3 id="authors">Authors</h3>
+
+<ul>
+  <li><a href="https://github.com/wilcofiers">Wilco Fiers</a></li>
+  <li><a href="https://github.com/skotkjerra">Stein Erik Skotkjerra</a></li>
+  <li><a href="https://github.com/brynanders">Bryn Anderson</a></li>
+  <li><a href="https://github.com/annethyme">Anne Thyme Nørregaard</a></li>
+  <li><a href="https://github.com/jkodu">Jey Nandakumar</a></li>
+</ul>
+        </section>
+        <aside
+          class="your-report svelte-60ir8u your-report--expanded sidebar"
+          tabindex="-1"
+        >
+        <style>.sidebar ul { padding: 0;} .sidebar li { margin-left: 1em; } </style>
+        <h2 style="margin-top: 0">About this document</h2>
+        <p><em>ACT Rules</em> are interpretations of accessibility standards as test rules.</p>
+        <style>dd { margin-left: 0!important; }</style>
+        <dl>
+          <dt>Rule type <span aria-hidden="true" class="more-info__icon" onclick="alert('explains in tooltip what normative is'); return false">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                  <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                </svg>
+                </span></dt>
+          <dd>atomic</dd>
+          <dt>Rule ID</dt>
+          <dd>2779a5</dd>
+          <dt>Last modified</dt>
+            <dd>    Sep 25, 2019</dd>
+         
+        </dl>
+            
+        </aside>
+      </div>
+    </main>
+    <div class="default-grid">
+      <aside
+        class="box box-icon box-space-above"
+        id="helpimprove"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <header class="box-h box-h-icon box-h-space-above box-h-icon">
+          <svg focusable="false" aria-hidden="true" class="icon-comments">
+            <use
+              xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-comments"
+            ></use>
+          </svg>
+          <h2>Help improve this page</h2>
+        </header>
+        <div class="box-i">
+          <p>
+            Please share your ideas, suggestions, or comments via e-mail to the
+            publicly-archived list
+            <a
+              href="mailto:wai-eo-editors@w3.org?subject=[en]%20Accessibility%20Fundamentals%20Overview"
+              >wai-eo-editors@w3.org</a
+            >
+            or via GitHub.
+          </p>
+          <div class="button-group">
+            <a
+              href="mailto:wai-eo-editors@w3.org?subject=[en]%20ATAG%20Report%20Tool&amp;body=[put%20comment%20here...]"
+              class="button"
+              ><span>E-mail</span></a
+            >
+            <a
+              href="https://github.com/w3c/wai-atag-report-tool/"
+              class="button"
+              ><span>Fork &amp; Edit on GitHub</span></a
+            ><a
+              href="https://github.com/w3c/wai-atag-report-tool/issues/new"
+              class="button"
+              ><span>New GitHub Issue</span></a
+            >
+          </div>
+        </div>
+        <div></div>
+      </aside>
+    </div>
+    <footer
+      id="wai-site-footer"
+      class="page-footer default-grid"
+      aria-label="Page"
+    >
+      <div
+        class="inner"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <p><strong>Date:</strong> Published 29 June 2020.</p>
+        <p>
+          <strong>Developer and Editor</strong>:
+          <a href="https://www.w3.org/People/hidde/">Hidde de Vries</a>.
+          <strong>Project Lead</strong>:
+          <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a>.
+          <strong>Contributors</strong>:
+          <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>,
+          Eric Eggert, Kevin White, and Daniel Montalvo.
+          <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a>
+          lists additional contributors.
+        </p>
+        <p>
+          Developed by the Education and Outreach Working Group (<a
+            href="http://www.w3.org/WAI/EO/"
+            >EOWG</a
+          >) with support from the
+          <a href="https://www.w3.org/WAI/about/projects/wai-guide/"
+            >WAI-Guide</a
+          >
+          project funded by the European Commission (EC) under the Horizon 2020
+          program (Grant Agreement 822245).
+        </p>
+      </div>
+    </footer>
+    <footer class="site-footer grid-4q" aria-label="Site">
+      <div class="q1-start q3-end about">
+        <div>
+          <p>
+            <a
+              class="largelink"
+              href="https://w3.org/WAI/"
+              dir="auto"
+              translate="no"
+              lang="en"
+              >W3C Web Accessibility Initiative (WAI)</a
+            >
+          </p>
+          <p>
+            Strategies, standards, and supporting resources to make the Web
+            accessible to people with disabilities.
+          </p>
+        </div>
+        <div class="social" dir="auto" translate="no" lang="en">
+          <ul>
+            <li>
+              <a href="https://twitter.com/w3c_wai"
+                ><svg focusable="false" aria-hidden="true" class="icon-twitter">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/feed.xml"
+                ><svg focusable="false" aria-hidden="true" class="icon-rss">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-rss"
+                  ></use>
+                </svg>
+                Feed</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv"
+                ><svg focusable="false" aria-hidden="true" class="icon-youtube">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-youtube"
+                  ></use>
+                </svg>
+                YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/news/subscribe/" class="button"
+                >Get News in Email</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div dir="auto" translate="no" lang="en">
+          <p>
+            Copyright © 2019 W3C <sup>®</sup> (<a
+              href="https://www.csail.mit.edu/"
+              ><abbr title="Massachusetts Institute of Technology">MIT</abbr></a
+            >,
+            <a href="https://www.ercim.eu/"
+              ><abbr
+                title="European Research Consortium for Informatics and Mathematics"
+                >ERCIM</abbr
+              ></a
+            >, <a href="https://www.keio.ac.jp/">Keio</a>,
+            <a href="https://ev.buaa.edu.cn">Beihang</a>)
+            <a href="https://w3.org/WAI/about/using-wai-material/"
+              >Permission to Use WAI Material</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+        <ul style="margin-bottom: 0;">
+          <li>
+            <a href="https://w3.org/WAI/about/contacting/">Contact WAI</a>
+          </li>
+          <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+          <li><a href="https://w3.org/WAI/news/">News</a></li>
+          <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+          <li>
+            <a href="https://w3.org/WAI/about/accessibility-statement/"
+              >Accessibility Statement</a
+            >
+          </li>
+          <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+          <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>
