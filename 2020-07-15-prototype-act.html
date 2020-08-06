@@ -115,7 +115,6 @@
           <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Rule: </span> 
 HTML page has title</h1>
        
-      <h2 id="description">Description</h2>
 
 <p>This rule checks that an HTML page has a title.</p>
 
@@ -162,7 +161,8 @@ HTML page has title</h1>
 
 <h2 id="test-cases">Test Cases</h2>
 
-<h3 id="passed">Passed</h3>
+<details>
+  <summary><h3 id="passed">Passed</h3></summary>
 
 <h4 id="passed-example-1">Passed Example 1</h4>
 
@@ -230,8 +230,10 @@ HTML page has title</h1>
 <span class="nt">&lt;title&gt;</span>#$@<span class="err">&amp;</span>%*!<span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
+</details>
 
-<h3 id="failed">Failed</h3>
+<details>
+<summary><h3 id="failed">Failed</h3></summary>
 
 <h4 id="failed-example-1">Failed Example 1</h4>
 
@@ -282,8 +284,11 @@ HTML page has title</h1>
 <span class="nt">&lt;title&gt;</span> <span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
+</details>
 
-<h3 id="inapplicable">Inapplicable</h3>
+ <details>
+
+<summary><h3 id="inapplicable">Inapplicable</h3></summary>
 
 <h4 id="inapplicable-example-1">Inapplicable Example 1</h4>
 
@@ -293,10 +298,12 @@ HTML page has title</h1>
   <span class="nt">&lt;title&gt;</span>This is an SVG<span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/svg&gt;</span>
 </code></pre></div></div>
-
+</details>
 <h2 id="glossary">Glossary</h2>
 
-<h3 id="outcome">Outcome</h3>
+<details>
+
+<summary><h3 id="outcome">Outcome</h3></summary>
 
 <p>A conclusion that comes from evaluating an ACT Rule on a <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> or one of its constituent <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. An outcome can be one of the three following types:</p>
 
@@ -309,8 +316,10 @@ HTML page has title</h1>
 <p><strong>Note:</strong> A rule has one <code class="highlighter-rouge">passed</code> or <code class="highlighter-rouge">failed</code> outcome for every <a href="https://www.w3.org/TR/act-rules-format/#test-target">test target</a>. When there are no test targets the rule has one inapplicable outcome. This means that each <a href="https://www.w3.org/TR/act-rules-format/#test-subject">test subject</a> will have one or more outcomes.</p>
 
 <p><strong>Note:</strong> Implementers using the <a href="https://www.w3.org/TR/EARL10-Schema/">EARL10-Schema</a> can express the outcome with the <a href="https://www.w3.org/TR/EARL10-Schema/#outcome">outcome property</a>. In addition to <code class="highlighter-rouge">passed</code>, <code class="highlighter-rouge">failed</code> and <code class="highlighter-rouge">inapplicable</code>, EARL 1.0 also defined an <code class="highlighter-rouge">incomplete</code> outcome. While this cannot be the outcome of an ACT Rule when applied in its entirety, it often happens that rules are only partially evaluated. For example, when applicability was automated, but the expectations have to be evaluated manually. Such “interim” results can be expressed with the incomplete outcome.</p>
+</details>
 
-<h3 id="whitespace">Whitespace</h3>
+<details>
+<summary><h3 id="whitespace">Whitespace</h3></summary>
 
 <p>Characters that have the Unicode “White_Space” property in the <a href="https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt">Unicode properties list</a>.</p>
 
@@ -329,7 +338,7 @@ HTML page has title</h1>
     </ul>
   </li>
 </ul>
-
+</details>
 <h2 id="acknowledgements">Acknowledgements</h2>
 
 <h3 id="authors">Authors</h3>
@@ -584,6 +593,9 @@ HTML page has title</h1>
       [data-tooltip-content]:hover {
         background: none;
         color: var(--light-blue);
+      }
+      [data-tippy-root] {
+        padding: 0 2em;
       }
       dt div {
         font-weight: normal;
