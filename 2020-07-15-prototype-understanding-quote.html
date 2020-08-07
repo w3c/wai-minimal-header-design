@@ -81,14 +81,19 @@
               <a href="#">All Understanding documents</a>
             </li>
             <li class="nav__item">
-              <a href="#">All supporting documents 
-                <style>.more-info__icon { display: inline-block; vertical-align: middle; }</style>
-                <span aria-hidden="true" class="more-info__icon" onclick="alert('navigates to page that explains what kind of supporting documents there are'); return false">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
-                  <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
-                </svg>
-                </span>
-              </a>
+              <a href="#">All supporting documents</a>
+                <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+                  <span class="visuallyhidden">Explain rule types</span>
+                  <span aria-hidden="true" class="more-info__icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                    <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                  </svg>
+                 </span>
+              </button>
+              <div id="explain-supporting-documents" hidden>
+                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+              </div>
             </li>
           </ul>
         </nav>
@@ -298,149 +303,6 @@
                
             </ol>
          </section>
-         <section id="techniques">
-            <h2>Techniques</h2>
-            <p>Each numbered item in this section represents a technique or combination of techniques
-               that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-               it is not necessary to use these particular techniques. For information on using other
-               techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-            </p>
-            <section id="sufficient">
-               <h3>Sufficient Techniques</h3>
-               <ol>
-                  
-                  
-                  <li>
-                                               
-                     <a class="general" href="https://www.w3.org/WAI/WCAG21/Techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
-                        within the content</a>
-                                           
-                     
-                  </li>
-                  
-                  
-                  <li>
-                     
-                     
-                     <p>Giving focus to elements in an order that follows sequences and relationships within
-                        the content using one of the following techniques:
-                        
-                     </p>
-                     
-                     
-                     <ul>
-                        
-                        
-                        <li>
-                                                             
-                           <a class="flash" href="https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH15">FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order
-                              in Flash</a>
-                                                         
-                           
-                        </li>
-                        
-                        
-                        <li>
-                                                             
-                           <a class="css" href="https://www.w3.org/WAI/WCAG21/Techniques/css/C27">C27: Making the DOM order match the visual order</a>
-                                                         
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           
-                           <a class="pdf" href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF3">PDF3: Ensuring correct tab and reading order in PDF documents</a>
-                           
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           
-                           <a class="silverlight" href="https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL34">SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties</a>
-                           
-                           
-                        </li>
-                        
-                        
-                     </ul>
-                     
-                     
-                  </li>
-                  
-                  
-                  <li>
-                     
-                     
-                     <p>Changing a Web page dynamically using one of the following techniques:</p>
-                     
-                     
-                     <ul>
-                        
-                        
-                        <li>
-                                                             
-                           <a class="script" href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR26">SCR26: Inserting dynamic content into the Document Object Model immediately following its
-                              trigger element</a>
-                                                         
-                           
-                        </li>
-                        
-                        
-                        <li>
-                                                             
-                           <a class="script" href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR37">SCR37: Creating Custom Dialogs in a Device Independent Way</a>
-                                                         
-                           
-                        </li>
-                        
-                        
-                        <li>
-                                                             
-                           <a class="script" href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR27">SCR27: Reordering page sections using the Document Object Model</a>
-                                                         
-                           
-                        </li>
-                        
-                        
-                     </ul>
-                     
-                     
-                  </li>
-                  
-                  
-               </ol>
-            </section>
-            <section id="failure">
-               <h3>Failures</h3>
-               <p>The following are common mistakes that are considered failures of this Success Criterion
-                  by the WCAG Working Group.
-               </p>
-               <ul>
-                  
-                  
-                  <li>
-                                               
-                     <a class="failure" href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F44">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that
-                        does not preserve meaning and operability</a>
-                                           
-                     
-                  </li>
-                  
-                  
-                  <li>
-                                               
-                     <a class="failure" href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F85">F85: Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent
-                        to their trigger control in the sequential navigation order</a>
-                                           
-                     
-                  </li>
-                  
-                  
-               </ul>
-            </section>
-         </section>
         </section>
         <aside
           class="your-report svelte-60ir8u your-report--expanded sidebar"
@@ -451,12 +313,11 @@
         <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.</p>
         <style>dd { margin-left: 0!important; }</style>
         <dl>
-          <dt>Suffient techniques</dt>
-          <dd><a href="#">G59</a></dd>
-        </dl>
-        <dt>Key terms</dt>
+          <dt>Key terms</dt>
           <dd><a href="#">navigated sequentially</a></dd>
           <dd><a href="#">web page</a></dd>
+          <dt>More information</dt>
+          <dd><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1&showtechniques=243#focus-order">How to meet SC 2.4.3</a></dd>
         </dl>
         </aside>
       </div>
