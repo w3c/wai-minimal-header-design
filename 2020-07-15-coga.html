@@ -20,14 +20,18 @@
     ></script>
     <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
     <style>
- 
       main {
         display: block;
         padding: 32px 0;
         background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
       }
-      
-      
+      .nav__item a {
+        display: inline-block;
+      }
+      .nav__item a + button {
+        margin-left: -0.75em;
+        margin-right: 1em;;
+      }      
       .tool-header {
         -ms-grid-column: 2;
         -ms-grid-column-span: 8;
@@ -73,17 +77,22 @@
         <nav class="nav svelte-3wzt7m" aria-label="Steps">
           <ul class="svelte-3wzt7m">
             <li class="nav__item">
-              <a href="#">All Understanding documents</a>
+              <a href="#">All COGA Design Patterns</a>
             </li>
             <li class="nav__item">
-              <a href="#">All supporting documents 
-                <style>.more-info__icon { display: inline-block; vertical-align: middle; }</style>
-                <span aria-hidden="true" class="more-info__icon" onclick="alert('navigates to page that explains what kind of supporting documents there are'); return false">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+              <a href="#">All supporting documents</a>
+              <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+                <span class="visuallyhidden">Explain rule types</span>
+                <span aria-hidden="true" class="more-info__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
                   <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
                 </svg>
                 </span>
-              </a>
+              </button>
+              <div id="explain-supporting-documents" hidden>
+                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+              </div>
             </li>
           </ul>
         </nav>
@@ -297,6 +306,43 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      var tooltips = document.querySelectorAll('[data-tooltip-content]');
 
+      for (i = 0, length = tooltips.length; i < length; i++) {
+        var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+        var content = document.querySelector(contentPointer).innerHTML;
+        
+        tippy(tooltips[i], {
+          content: content,
+          allowHTML: true,
+          interactive: true,
+        });
+      }
+    </script>
+    <style>
+      [data-tooltip-content] {
+        padding: 0;
+        background: none;
+        border: 0;
+        color: black;
+        font-size: inherit;
+        vertical-align: middle;
+      }
+      [data-tooltip-content]:hover {
+        background: none;
+        color: var(--light-blue);
+      }
+      [data-tippy-root] {
+        padding: 0 2em;
+      }
+      dt div {
+        font-weight: normal;
+      }
+    </style>
   </body>
 </html>

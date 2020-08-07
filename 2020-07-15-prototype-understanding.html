@@ -20,14 +20,18 @@
     ></script>
     <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
     <style>
- 
       main {
         display: block;
         padding: 32px 0;
         background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
       }
-      
-      
+      .nav__item a {
+        display: inline-block;
+      }
+      .nav__item a + button {
+        margin-left: -0.75em;
+        margin-right: 1em;;
+      }      
       .tool-header {
         -ms-grid-column: 2;
         -ms-grid-column-span: 8;
@@ -35,6 +39,7 @@
         grid-column: 2 / 10;
         max-height: 3em;
       }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
     <link rel="stylesheet" href="/a11y-light.css" />
@@ -628,6 +633,43 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+      // With the above scripts loaded, you can call `tippy()` with a CSS
+      // selector and a `content` prop:
+      var tooltips = document.querySelectorAll('[data-tooltip-content]');
 
+      for (i = 0, length = tooltips.length; i < length; i++) {
+        var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+        var content = document.querySelector(contentPointer).innerHTML;
+        
+        tippy(tooltips[i], {
+          content: content,
+          allowHTML: true,
+          interactive: true,
+        });
+      }
+    </script>
+    <style>
+      [data-tooltip-content] {
+        padding: 0;
+        background: none;
+        border: 0;
+        color: black;
+        font-size: inherit;
+        vertical-align: middle;
+      }
+      [data-tooltip-content]:hover {
+        background: none;
+        color: var(--light-blue);
+      }
+      [data-tippy-root] {
+        padding: 0 2em;
+      }
+      dt div {
+        font-weight: normal;
+      }
+    </style>
   </body>
 </html>
