@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prototype: Technique document| W3C WAI</title>
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/assets/css/style.css?1573220675560713000"
+    />
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/atag/report-tool/build/bundle.css"
+    />
+    <script
+      type="text/javascript"
+      async=""
+      defer=""
+      src="//www.w3.org/analytics/piwik/piwik.js"
+    ></script>
+    <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
+    <style>
+      main {
+        display: block;
+        padding: 32px 0;
+        background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
+      }
+      .nav__item a {
+        display: inline-block;
+      }
+      .nav__item a + button {
+        margin-left: -0.75em;
+        margin-right: 1em;;
+      }      
+      .tool-header {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 8;
+        -ms-grid-row: 1;
+        grid-column: 2 / 10;
+        max-height: 3em;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <link rel="stylesheet" href="/a11y-light.css" />
+  </head>
+  <body>
+    <header id="site-header" class="default-grid with-gap">
+      <div class="tool-header">
+        <span class="tool-header-name">WCAG: Techniques</span>
+        <div class="tool-header-logo">
+          <a href="http://w3.org/">
+            <img
+              alt="W3C"
+              src="https://w3.org/WAI/atag/report-tool/images/w3c.svg"
+              width="92"
+              height="44"
+            />
+          </a>
+          <a href="http://w3.org/WAI/">
+            <img
+              alt="Web Accessibility Initiative"
+              src="https://w3.org//WAI/atag/report-tool/images/wai.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="conformance-tool" class="default-grid leftcol">
+        <!-- app 'renders' here -->
+        <div
+          style="display: none;"
+          aria-hidden="true"
+          data-svnav-router="0"
+        ></div>
+        <nav class="nav svelte-3wzt7m" aria-label="Steps">
+          <ul class="svelte-3wzt7m">
+            <li class="nav__item">
+              <a href="#">All Techniques</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">All supporting documents</a>
+                <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+                  <span class="visuallyhidden">Explain rule types</span>
+                  <span aria-hidden="true" class="more-info__icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                    <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                  </svg>
+                 </span>
+              </button>
+              <div id="explain-supporting-documents" hidden>
+                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#">About Techniques</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="app-content svelte-1ecbihu" aria-label="Main content">
+          <h1 style="max-width: 20em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Failure Technique F2, due to </span> Using changes in text presentation to convey information without using the appropriate markup or text </h1>
+         <section id="description">
+            <h2>Description</h2>
+            <p>This document describes a failure that occurs when a change in the appearance of text conveys meaning without using appropriate semantic markup. This failure also applies to images of text that are not enclosed in the appropriate semantic markup. 
+            </p>
+         </section>
+         <section id="examples">
+            <h2>Examples</h2>
+            <section class="example" id="example-1-a-list-showing-steps-in-a-sequence-">
+              <section class="example" id="example-1-using-css-to-style-the-p-element-to-look-like-a-heading">
+                <h3>Example 1: Using CSS to style the <code class="el">p</code> element to look like a heading
+                </h3>
+                <p>The author intended to make a heading but didn't want the look of the default HTML
+                   heading. So they used CSS to style the P element to look like a heading and they called
+                   it a heading. But they failed to use the proper HTML heading element. Therefore, the
+                   Assisitive Technology could not distinguish it as a heading.
+                </p><pre xml:space="preserve"> &lt;style type="text/css"&gt;
+  .heading1{
+         font-family: Times, serif;
+         font-size:200%;
+         font-weight:bold;
+  }
+  &lt;/style&gt;
+ 
+  &lt;p class="heading1"&gt;Introduction&lt;/p&gt;
+  &lt;p&gt;This introduction provides detailed information about how to use this 
+  ........
+  &lt;/p&gt;
+ </pre><div class="note">
+                   <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                   <div>
+                      
+                      <p>In this case, the proper approach would be to use CSS to style the <code class="el">H1</code> element in HTML.
+                      </p>
+                      
+                   </div>
+                </div>
+             </section>
+             <section class="example" id="example-2-images-of-text-used-as-headings-where-the-images-are-not-marked-up-with-heading-tags">
+                <h3>Example 2: Images of text used as headings where the images are not marked up with
+                   heading tags
+                </h3>
+                <p>Chapter1.gif is an image of the words, "Chapter One" in a Garamond font sized at 20
+                   pixels. This is a failure because at a minimum the img element should be enclosed
+                   within a header element. A better solution would be to eliminate the image and to
+                   enclose the text within a header element which has been styled using CSS.
+                </p><pre xml:space="preserve">&lt;img src="Chapter1.gif" alt="Chapter One"&gt;
+  
+ &lt;p&gt;Once upon a time in the land of the Web.....
+ &lt;/p&gt;
+ </pre></section>
+             <section class="example" id="example-3-using-css-to-visually-emphasize-a-phrase-or-word-without-conveying-that-emphasis-semantically">
+                <h3>Example 3: Using CSS to visually emphasize a phrase or word without conveying that
+                   emphasis semantically
+                </h3>
+                <p>The following example fails because the information conveyed by using the CSS font-weight
+                   property to change to a bold font is not conveyed through semantic markup or stated
+                   explicitly in the text.
+                </p>
+                <p>Here is a CSS class to specify bold:</p><pre xml:space="preserve">.yell {
+   font-weight:bold;
+   text-transform: uppercase;
+ }
+ </pre><p>And here is the corresponding HTML:</p><pre xml:space="preserve">&lt;p&gt;
+  "I said, &lt;span class="yell"&gt;no&lt;/span&gt;, not before dinner!", 
+  was the exasperated response when Timmy asked his mother for the 
+  fourth time for an ice cream cone. 
+  &lt;/p&gt;
+ </pre></section>
+            <section class="example" id="example-4-contact-information-using-a-definition-list">
+               <h3>Example 4: Contact information using a definition list</h3>
+               <p>This example uses a defintion list to mark up pairs of related items. The pairs themselves
+                  are a logically related list. Since browsers lack wide support for CSS styling on
+                  definition list elements, span elements have been included in the markup for styling
+                  purposes only, and are not required: 
+               </p><pre xml:space="preserve"><code class="language-markup">&lt;dl&gt;
+&lt;dt&gt;&lt;span&gt;name:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;John Doe&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;tel:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;01-2345678&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;fax:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;02-3456789&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;email:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;johndoe@someemail.com&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</code>
+</pre><p>The following CSS styling can be used to format each paired item in the list on its
+                  own line, as well as giving a table-like layout: 
+               </p><pre xml:space="preserve"><code class="language-css">dt, dd{float: left;margin: 0;padding: 0;}
+dt{clear:both;font-weight: bold}
+dt span{display: inline-block; width: 70px;}
+dd span{display: inline-block; margin-right: 5px;}</code>
+</pre><p class="working-example">This is shown in the <a href="../../working-examples/definition-list-contact-info/">working example of Contact information using a definition list</a>
+                  
+               </p>
+            </section>
+            <section class="example" id="example-5-using-lists-to-group-links">
+               <h3>Example 5: Using lists to group links</h3>
+               <p>In this example the links are grouped using the <code class="el">ul</code> and <code class="el">li</code>
+                          elements.
+               </p><pre xml:space="preserve"><code class="language-markup">&lt;a name="categories" id="categories"&gt;&lt;/a&gt;&lt;h2&gt;Product Categories&lt;/h2&gt;
+&lt;ul class="navigation"&gt;
+    &lt;li&gt;&lt;a href="kitchen.html"&gt;Kitchen&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="bedbath.html"&gt;Bed &amp;amp; Bath&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="dining.html"&gt;Fine Dining&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="lighting.html"&gt;Lighting&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="storage.html"&gt;Storage&lt;/a&gt;&lt;li&gt;
+&lt;/ul&gt; </code></pre><p>CSS can be used to style the list elements, so this technique can be used with a
+                          variety of visual appearances.
+               </p>
+               <p>Here is a style that removes the list bullets and the left padding that creates the
+                          indent and flows the individual list elements horizontally.
+               </p><pre xml:space="preserve"><code class="language-css">ul.navigation {
+  list-style: none; 
+  padding: 0;
+}
+ul.navigation li {
+  display: inline;
+}</code></pre><p>This style removes the list bullets and the left padding and displays the items in
+                          a floating block.
+               </p><pre xml:space="preserve"><code class="language-css">ul.navigation {
+ list-style: none; 
+ padding: 0;
+}
+ul.navigation li {
+ display: block; 
+ float: left;
+}</code></pre></section>
+         </section>
+
+         <section id="tests">
+            <h2>Tests</h2>
+            <section class="procedure" id="procedure">
+               <h3>Procedure</h3>
+               
+               <ol>
+                  
+                  <li>
+                     
+                     <p>For images of text:</p>
+                     
+                     <ol>
+                        
+                        <li>Check if any images of text are used to convey structural information of the document.</li>
+                        
+                        <li>Check that the proper semantic structure (e.g., HTML headings) is used with the text
+                           to convey the information.
+                        </li>
+                        
+                     </ol>
+                     
+                  </li>
+                  
+                  <li>
+                     
+                     <p>For styled text that conveys information:</p>
+                     
+                     <ol>
+                        
+                        <li>Check if there is any styled text that conveys structural information.</li>
+                        
+                        <li>Check that in addition to styling, the proper semantic structure is used with the
+                           text to convey the information.
+                        </li>
+                        
+                     </ol>
+                     
+                  </li>
+                  
+               </ol>
+               
+            </section>
+            <section class="results" id="expected-results">
+               <h3>Expected Results</h3>
+               
+               <ul>
+                  
+                  <li>If check #1.1 is true, then #1.2 is true.</li>
+                  
+                  <li>If check #2.1 is true, then #2.2 is true.</li>
+                  
+               </ul>
+               
+            </section>
+           </section>
+           </section> 
+        </section>
+        <aside
+          class="your-report svelte-60ir8u your-report--expanded sidebar"
+          tabindex="-1"
+        >
+        <style>.sidebar ul { padding: 0;} .sidebar li { margin-left: 1em; } </style>
+        <h2 style="margin-top: 0">About this page</h2>
+        <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion.</p>
+        <style>dd { margin-left: 0!important; }</style>
+        <dl>
+          <dt>Type of technique 
+            <button style="display: inline" type="button" data-tooltip-content="#explain-types-of-techniques">
+              <span class="visuallyhidden">Explain types of techniques</span>
+              <span aria-hidden="true" class="more-info__icon">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+              </svg>
+             </span>
+          </button>
+          <div id="explain-types-of-techniques" hidden>
+            <p>There are different types of techniques:</p>
+            <ul>
+              <li>Sufficient - reliable ways to meet a WCAG Criterion</li>
+              <li>Advisory - suggested ways to improve accessibility</li>
+              <li>Failure - things that cause accessibility barriers and fail specific success criteria</li>
+            </ul>
+            <p>Note: all techniques are “informative”, that is, you do not have to use them.</p>
+          </div>
+
+
+          </dt>
+          <dd>Failure</dd>
+          <dt>Example of a failure of</dt>
+          <dd><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1#info-and-relationships">1.3.1 Info and relationships</a></dd>
+          <dt>Related test rules 
+            
+
+            <button style="display: inline" type="button" data-tooltip-content="#explain-test-rules">
+              <span class="visuallyhidden">Explain test rules</span>
+              <span aria-hidden="true" class="more-info__icon">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+              </svg>
+             </span>
+          </button>
+          <div id="explain-test-rules" hidden>WCAG Success Criteria interpreted as test rules, created by the ACT Task Force.</div>
+
+
+
+          </dt>
+            <dd><a href="2020-07-15-prototype-act.html">HTML page has title</a></dd>
+            <dt>Related Techniques</dt>
+            <dd><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H40">H40: Using description lists</a></dd>
+        </dl>
+            <h3>Other sources</h3>
+            <p style="margin-top: -.5em; margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+            <ul>
+               
+               <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.2">Unordered lists (UL), ordered lists (OL), and list items (LI)</a>
+                                         
+               </li>
+               
+               <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.3">Definition lists: the DL, DT, and DD elements</a>
+                                         
+               </li>
+               
+            </ul>
+        </aside>
+      </div>
+    </main>
+    <div class="default-grid">
+      <aside
+        class="box box-icon box-space-above"
+        id="helpimprove"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <header class="box-h box-h-icon box-h-space-above box-h-icon">
+          <svg focusable="false" aria-hidden="true" class="icon-comments">
+            <use
+              xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-comments"
+            ></use>
+          </svg>
+          <h2>Help improve this page</h2>
+        </header>
+        <div class="box-i">
+          <p>
+            Please share your ideas, suggestions, or comments via e-mail to the
+            publicly-archived list
+            <a
+              href="mailto:wai-eo-editors@w3.org?subject=[en]%20Accessibility%20Fundamentals%20Overview"
+              >wai-eo-editors@w3.org</a
+            >
+            or via GitHub.
+          </p>
+          <div class="button-group">
+            <a
+              href="mailto:wai-eo-editors@w3.org?subject=[en]%20ATAG%20Report%20Tool&amp;body=[put%20comment%20here...]"
+              class="button"
+              ><span>E-mail</span></a
+            >
+            <a
+              href="https://github.com/w3c/wai-atag-report-tool/"
+              class="button"
+              ><span>Fork &amp; Edit on GitHub</span></a
+            ><a
+              href="https://github.com/w3c/wai-atag-report-tool/issues/new"
+              class="button"
+              ><span>New GitHub Issue</span></a
+            >
+          </div>
+        </div>
+        <div></div>
+      </aside>
+    </div>
+    <footer
+      id="wai-site-footer"
+      class="page-footer default-grid"
+      aria-label="Page"
+    >
+      <div
+        class="inner"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <p><strong>Date:</strong> Published 29 June 2020.</p>
+        <p>
+          <strong>Developer and Editor</strong>:
+          <a href="https://www.w3.org/People/hidde/">Hidde de Vries</a>.
+          <strong>Project Lead</strong>:
+          <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a>.
+          <strong>Contributors</strong>:
+          <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>,
+          Eric Eggert, Kevin White, and Daniel Montalvo.
+          <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a>
+          lists additional contributors.
+        </p>
+        <p>
+          Developed by the Education and Outreach Working Group (<a
+            href="http://www.w3.org/WAI/EO/"
+            >EOWG</a
+          >) with support from the
+          <a href="https://www.w3.org/WAI/about/projects/wai-guide/"
+            >WAI-Guide</a
+          >
+          project funded by the European Commission (EC) under the Horizon 2020
+          program (Grant Agreement 822245).
+        </p>
+      </div>
+    </footer>
+    <footer class="site-footer grid-4q" aria-label="Site">
+      <div class="q1-start q3-end about">
+        <div>
+          <p>
+            <a
+              class="largelink"
+              href="https://w3.org/WAI/"
+              dir="auto"
+              translate="no"
+              lang="en"
+              >W3C Web Accessibility Initiative (WAI)</a
+            >
+          </p>
+          <p>
+            Strategies, standards, and supporting resources to make the Web
+            accessible to people with disabilities.
+          </p>
+        </div>
+        <div class="social" dir="auto" translate="no" lang="en">
+          <ul>
+            <li>
+              <a href="https://twitter.com/w3c_wai"
+                ><svg focusable="false" aria-hidden="true" class="icon-twitter">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/feed.xml"
+                ><svg focusable="false" aria-hidden="true" class="icon-rss">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-rss"
+                  ></use>
+                </svg>
+                Feed</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv"
+                ><svg focusable="false" aria-hidden="true" class="icon-youtube">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-youtube"
+                  ></use>
+                </svg>
+                YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/news/subscribe/" class="button"
+                >Get News in Email</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div dir="auto" translate="no" lang="en">
+          <p>
+            Copyright © 2019 W3C <sup>®</sup> (<a
+              href="https://www.csail.mit.edu/"
+              ><abbr title="Massachusetts Institute of Technology">MIT</abbr></a
+            >,
+            <a href="https://www.ercim.eu/"
+              ><abbr
+                title="European Research Consortium for Informatics and Mathematics"
+                >ERCIM</abbr
+              ></a
+            >, <a href="https://www.keio.ac.jp/">Keio</a>,
+            <a href="https://ev.buaa.edu.cn">Beihang</a>)
+            <a href="https://w3.org/WAI/about/using-wai-material/"
+              >Permission to Use WAI Material</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+        <ul style="margin-bottom: 0;">
+          <li>
+            <a href="https://w3.org/WAI/about/contacting/">Contact WAI</a>
+          </li>
+          <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+          <li><a href="https://w3.org/WAI/news/">News</a></li>
+          <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+          <li>
+            <a href="https://w3.org/WAI/about/accessibility-statement/"
+              >Accessibility Statement</a
+            >
+          </li>
+          <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+          <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+      var tooltips = document.querySelectorAll('[data-tooltip-content]');
+
+      for (i = 0, length = tooltips.length; i < length; i++) {
+        var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+        var content = document.querySelector(contentPointer).innerHTML;
+        
+        tippy(tooltips[i], {
+          content: content,
+          allowHTML: true,
+          interactive: true,
+        });
+      }
+    </script>
+    <style>
+      [data-tooltip-content] {
+        padding: 0;
+        background: none;
+        border: 0;
+        color: black;
+        font-size: inherit;
+        vertical-align: middle;
+      }
+      [data-tooltip-content]:hover {
+        background: none;
+        color: var(--light-blue);
+      }
+      [data-tippy-root] {
+        padding: 0 2em;
+      }
+      dt div {
+        font-weight: normal;
+      }
+    </style>
+  </body>
+</html>
