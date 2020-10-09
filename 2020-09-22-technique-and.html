@@ -76,20 +76,25 @@
         ></div>
         <nav class="nav svelte-3wzt7m" aria-label="Steps">
           <ul class="svelte-3wzt7m">
-            <li class="nav__item">
-              <a href="#">All Techniques</a>
+           <li class="nav__item">
+              <a href="https://www.w3.org/WAI/WCAG21/Techniques/">All Techniques</a>
             </li>
             <li class="nav__item">
-              <a href="#">All supporting documents 
-                <style>.more-info__icon { display: inline-block; vertical-align: middle; }</style>
-                <span aria-hidden="true" class="more-info__icon" onclick="alert('navigates to page that explains what kind of supporting documents there are'); return false">
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
-                  <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
-                </svg>
-                </span>
-              </a>
+              <a href="alt-index.html">All WCAG 2 Guidance</a>
+                <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+                  <span class="visuallyhidden">Explain rule types</span>
+                  <span aria-hidden="true" class="more-info__icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                    <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                  </svg>
+                 </span>
+              </button>
+              <div id="explain-supporting-documents" hidden>
+                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+              </div>
             </li>
-            <li class="nav__item">
+             <li class="nav__item">
               <a href="#">About Techniques</a>
             </li>
           </ul>
@@ -108,11 +113,11 @@
           <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Technique G115</span> Using semantic elements to mark up structure</h1>
           <aside class="box">
             <header class="box-h  box-h-icon"> 
-              <svg focusable="false" aria-hidden="true" class="icon-warning "><use xlink:href="icons.svg#icon-warning"></use></svg> 
+              <svg focusable="false" aria-hidden="true" class="icon-default "><use xlink:href="icons.svg#icon-default"></use></svg> 
               Sufficient, if combined
             </header>
             <div class="box-i">
-                <p>This technique is sufficient to meet WCAG <strong><a href="#">2.1.1</a></strong>, if it is combined with technique <strong><a href="#">H49</a></strong>. </p><p><a class="button button-small button-secondary" href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-techniques#numbered-lists-%22and%22">More about combined Techniques</a></p>
+                <p>This technique is sufficient to meet WCAG <strong><a href="#">2.1.1</a></strong>, if it is combined with technique <strong><a href="#">H49</a></strong>. </p>
             </div>
           </aside>
          <section id="description">
