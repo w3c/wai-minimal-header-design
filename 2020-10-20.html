@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prototype: Technique document| W3C WAI</title>
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/assets/css/style.css?1573220675560713000"
+    />
+    <link
+      rel="stylesheet"
+      href="https://w3.org/WAI/atag/report-tool/build/bundle.css"
+    />
+    <script
+      type="text/javascript"
+      async=""
+      defer=""
+      src="//www.w3.org/analytics/piwik/piwik.js"
+    ></script>
+    <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
+    <style>
+      main {
+        display: block;
+        padding: 32px 0;
+        background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
+      }
+      .nav__item a {
+        display: inline-block;
+      }
+      .nav__item a + button {
+        margin-left: -0.75em;
+        margin-right: 1em;;
+      }      
+      .tool-header {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 8;
+        -ms-grid-row: 1;
+        grid-column: 2 / 10;
+        max-height: 3em;
+      }
+
+      h2 {
+            position: relative;
+      }
+      h2 .permalink {
+            position: absolute;
+            left: -1em;
+      }
+      h2 .permalink a {
+            color: var(--grey);
+            text-decoration: none;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <link rel="stylesheet" href="/a11y-light.css" />
+  </head>
+  <body>
+    <header id="site-header" class="default-grid with-gap">
+      <div class="tool-header">
+        <span class="tool-header-name">WCAG 2.1: Techniques</span>
+        <div class="tool-header-logo">
+          <a href="http://w3.org/">
+            <img
+              alt="W3C"
+              src="https://w3.org/WAI/atag/report-tool/images/w3c.svg"
+              width="92"
+              height="44"
+            />
+          </a>
+          <a href="http://w3.org/WAI/">
+            <img
+              alt="Web Accessibility Initiative"
+              src="https://w3.org//WAI/atag/report-tool/images/wai.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="conformance-tool" class="default-grid leftcol">
+        <!-- app 'renders' here -->
+        <div
+          style="display: none;"
+          aria-hidden="true"
+          data-svnav-router="0"
+        ></div>
+        <nav class="nav svelte-3wzt7m" aria-label="Steps">
+          <ul class="svelte-3wzt7m">
+            <li class="nav__item">
+              <a href="alt-index.html">All WCAG 2 Guidance</a>
+                <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+                  <span class="visuallyhidden">Explain rule types</span>
+                  <span aria-hidden="true" class="more-info__icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
+                    <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
+                  </svg>
+                 </span>
+              </button>
+              <div id="explain-supporting-documents" hidden>
+                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="2020-10-13-all.html">All Techniques</a>
+            </li>
+            <li class="nav__item">
+              <a href="2020-10-20.html" class="active">About Techniques</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="app-content svelte-1ecbihu" aria-label="Main content">
+
+  <h1>About Techniques</h1>
+
+<section id="abstract">
+         			
+         <h2>Abstract</h2>
+         <section class="doc-note-box">
+  <p><strong>Editor's note</strong> this section taken from TR document, could use copy editing</p>
+
+</section>
+         			
+         
+         <p>This <em>Techniques for WCAG 2.1</em> document provides guidance for web content authors and evaluators on meeting <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> success criteria. It is part of a series of documents published by the W3C Web Accessibility
+            Initiative (WAI) to support WCAG 2.1. For an introduction to WCAG, supporting technical
+            documents, and educational material, see <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG) Overview</a>.
+            
+         </p>
+         			
+         
+         <p>Techniques are informative—that means they are not required. The basis for determining
+            conformance to WCAG 2.1 is the success criteria from the <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 standard</a>—not the techniques. <strong>For important information about techniques, please see the <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-techniques.html">Understanding Techniques for WCAG Success Criteria</a> section of Understanding WCAG 2.1.</strong></p>
+         			
+         
+         <p><em>Techniques for WCAG 2.1</em> is not intended to be used as a stand-alone document. Instead, it is expected that
+            content authors will usually use <a href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG 2.0: A customizable quick reference</a> to read the WCAG success criteria, and follow links from there to specific topics
+            in Understanding WCAG 2.0 and to specific techniques.
+            
+         </p>		
+         
+      </section>
+
+
+
+         
+         <h2>Introduction to Techniques for WCAG 2.1</h2>
+<section id="introduction">
+         		         <section class="doc-note-box">
+  <p><strong>Editor's note</strong> we may want to combine this and “Abstract”</p>
+
+</section>
+	         			
+         
+         <p>This <em>Techniques for WCAG 2.1</em> document provides guidance for web content authors and evaluators on meeting <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>success criteria. It is part of a series of documents published by the W3C Web Accessibility
+            Initiative (WAI) to support WCAG 2.1. For an introduction to WCAG, supporting technical
+            documents, and educational material, see <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG) Overview</a>.
+            
+         </p>
+         			
+         
+         <p>WCAG 2.1 itself is a stable document that does not change. This <em>Techniques for WCAG 2.1</em> document is updated periodically to cover more current best practices and changes
+            in technologies and tools.
+            
+         </p>
+         			
+         
+         <p>Techniques are informative—that means they are not required. The basis for determining
+            conformance to WCAG 2.1 is the success criteria from the <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 standard</a>—not the techniques.
+            
+         </p>
+         			
+         
+         <div class="note">
+            <div role="heading" class="note-title marker" aria-level="3">Note</div>
+            <div>
+               				
+               
+               <p>W3C cautions against requiring W3C's sufficient techniques. The only thing that should
+                  be required is meeting the WCAG 2.1 success criteria. To learn more, see:
+                  
+               </p>
+               				
+               
+               <ul>
+                  					
+                  
+                  <li>
+                     						
+                     
+                     <p><a href="https://www.w3.org/WAI/WCAG20/wcag2faq.html#techsnot">What would be the negative consequences of allowing <em>only</em> W3C's published techniques to be used for conformance to WCAG 2?</a> in the WCAG 2 FAQ
+                        
+                     </p>
+                     					
+                     
+                  </li>
+                  				
+                  
+               </ul>
+               			
+               
+            </div>
+         </div>
+         			
+         
+         <p><em>Techniques for WCAG 2.1</em> is not intended to be used as a stand-alone document. Instead, it is expected that
+            content authors will usually use <a href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG 2.1: A customizable quick reference</a> to read the WCAG success criteria, and follow links from there to specific topics
+            in Understanding WCAG 2.1 and to specific techniques.
+            
+         </p>
+         			
+         
+         <p>Publication of techniques for a specific technology does not imply that the technology
+            can be used in all situations to create content that meets WCAG 2.1 success criteria
+            and conformance requirements. Developers need to be aware of the limitations of specific
+            technologies and provide content in a way that is accessible to people with disabilities.
+            
+            
+         </p>
+         			
+         
+         <p><strong>For important information about techniques, please see the <a class="understanding" href="../Understanding/understanding-techniques">Understanding Techniques for WCAG Success Criteria</a> section of Understanding WCAG 2.1.</strong></p>
+         		
+         
+      </section>
+
+
+           <section id="changelog">
+         			
+         
+         <h2>Change Log</h2>
+         			
+         
+         <p>A list of new, removed or significantly updated techniques:</p>
+         			
+         
+         <ol>
+            
+            
+            <li>
+               
+               <time datetime="2019-09-12">Sept 12th 2019</time>: Added <a href="./techniques/failures/F105">Failure of Success Criterion 2.5.1 due to providing functionality via a path-based
+                  gesture without simple pointer alternative</a></li>
+            
+            
+            <li>
+               
+               <time datetime="2019-09-12">Sept 12th 2019</time>: Added <a href="./techniques/failures/F106">Failure due to inability to deactivate motion actuation</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-09-03">Sept 3rd 2019</time>: Added <a href="./techniques/failures/F104">Failure of Success Criterion 1.4.12 due to clipped or overlapped content when text
+                  spacing is adjusted</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-09-03">Sept 3rd 2019</time>: Added <a href="./techniques/failures/F103">Failure of Success Criterion 4.1.3 due to providing status messages that cannot be
+                  programmatically determined through role or properties</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-08-06">Aug 6th 2019</time>: Added <a href="./techniques/failures/F102">Failure of Success Criterion 1.4.10 due to content disappearing and not being available
+                  when content has reflowed</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-16">Jul 16th 2019</time>: Added <a href="./techniques/general/G216">Providing single point activation for a control slider</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-16">Jul 16th 2019</time>: Added <a href="./techniques/general/G215">Providing controls to achieve the same result as path based or multipoint gestures</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-16">Jul 16th 2019</time>: Added <a href="./techniques/failures/F100">Failure of Success Criterion 1.3.4 due to showing a message asking to reorient device</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-16">Jul 16th 2019</time>: Added <a href="./techniques/general/G214">Using a control to allow access to content in different orientations which is otherwise
+                  restricted</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-10">Jul 10th 2019</time>: Added <a href="./techniques/css/C40">Creating a two-color focus indicator to ensure sufficient contrast</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-10">Jul 10th 2019</time>: Added <a href="./techniques/failures/F99">Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that
+                  cannot be turned off or remapped</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-07-10">Jul 10th 2019</time>: Added <a href="./client-side-script/SCR39">Making content on focus or hover hoverable, dismissible, and persistent</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-06-18">Jun 18th 2019</time>: Added <a href="./general/G212">Using native controls to ensure functionality is triggered on the up-event</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-06-11">Jun 11 2019</time>: Added <a href="./failures/F98">Failure of Success Criterion 2.5.6 due to interactions being limited to touch-only
+                  on touchscreen devices</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-06-18">Jun 18th 2019</time>: Added <a href="./general/G213">Provide conventional controls and an application setting for motion activated input</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-05-25">May 25th 2019</time>: Added <a href="./aria/ARIA24">Semantically identifying a font icon with role="img"</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-04-20">Apr 26th 2019</time>: Added <a href="./failures/F97">Failure due to locking the orientation to landscape or portrait view</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-02-26">Feb 26th 2019</time>: Removed <a href="./failures/F52">F52</a> from SC 3.2.1 (still attached to SC 3.2.5)
+               
+            </li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-02-26">Feb 26th 2019</time>: Added <a href="./general/G209">Provide sufficient contrast at the boundaries between adjoining colors</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2019-01-10">Jan 10th 2019</time>: Added <a href="./css/C39">Using the CSS reduce-motion query to prevent motion</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-12-14">Dec 14th 2018</time>: Added <a href="./general/G207">Ensuring that a contrast ratio of 3:1 is provided for icons</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-13">Nov 30th 2018</time>: Added <a href="./css/C38">Using CSS width, max-width and flexbox to fit labels and inputs</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-30">Nov 30th 2018</time>: Added <a href="./failures/F95">F95 of 1.4.13 due to content shown on hover not being hoverable</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-13">Nov 13th 2018</time>: Added <a href="./css/C34">C34 Using media queries to un-fixing sticky headers / footers</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-13">Nov 13th 2018</time>: Added <a href="./css/C36">C36 Allowing for text spacing override</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-13">Nov 13th 2018</time>: Added <a href="./css/C37">C37 Using CSS max-width and height to fit images</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-30">Nov 30th 2018</time>: Added <a href="./general/G207">G207 Ensuring that drag-and-drop actions can be cancelled</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-30">Nov 30th 2018</time>: Added <a href="./failures/F95">F95 Failure of Success Criterion 1.4.13 due to content shown on hover not being hoverable</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-30">Nov 30th 2018</time>: Added <a href="./failures/F96">F96 Failure of Success Criterion 2.5.3 due to "accessible name" not containing the
+                  visible label text</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-11-30">Nov 30th 2018</time>: Added <a href="./css/C38">C38 Using CSS width, max-width and flexbox to fit labels and inputs</a></li>
+            				
+            
+            <li>
+               
+               <time datetime="2018-12-14">Dec 14th 2018</time>: Added <a href="./general/G207">G207 Ensuring that a contrast ratio of 3:1 is provided for icons</a></li>
+            			
+            
+         </ol>
+         			
+         
+         <p>For a more detailed view of recent changes to the informative documents see the <a href="https://github.com/w3c/wcag/commits/master">github updates</a>.
+            
+         </p>
+         		
+         
+      </section>
+      <section id="ack_participants-active">
+	<h2>Participants of the AG WG active in the development of this document:</h2>
+	<ul>
+		<li>Jake Abma (Invited Expert)</li>
+		<li>Shadi Abou-Zahra (W3C)</li>
+		<li>Chuck Adams (Oracle Corporation)</li>
+		<li>Amani Ali (Nomensa)</li>
+		<li>Jim Allan (Invited Expert)</li>
+		<li>Paul Adam (Deque Systems, Inc.)</li>
+		<li>Christopher Auclair (VitalSource | Ingram Content Group)</li>
+		<li>Jon Avila (Level Access)</li>
+		<li>Tom Babinszki (IBM Corporation)</li>
+		<li>Bruce Bailey (U.S. Access Board)</li>
+		<li>Renaldo Bernard (University of Southampton)</li>
+		<li>Chris Blouch (Level Access)</li>
+		<li>Denis Boudreau (Deque Systems, Inc.)</li>
+		<li>Judy Brewer (W3C)</li>
+		<li>Shari Butler (Pearson plc)</li>
+		<li>Thaddeus Cambron (Invited Expert)</li>
+		<li>Alastair Campbell (Nomensa)</li>
+		<li>Laura Carlson (Invited Expert)</li>
+		<li>Louis Cheng (Google)</li>
+		<li>Pietro Cirrincione (Invited Expert)</li>
+		<li>Vivienne Conway (Web Key IT Pty Ltd)</li>
+		<li>Michael Cooper (W3C)</li>
+		<li>Jennifer Delisi (Invited Expert)</li>
+		<li>Romain Deltour (DAISY Consortium)</li>
+		<li>Wayne Dick (Knowbility, Inc)</li>
+		<li>Chaohai Ding (University of Southampton)</li>
+		<li>Kim Dirks (Thomson Reuters)</li>
+		<li>Shwetank Dixit (BarrierBreak Technologies)</li>
+		<li>Anthony Doran (TextHelp)</li>
+		<li>E.A. Draffan (University of Southampton)</li>
+		<li>Eric Eggert (W3C)</li>
+		<li>Michael Elledge (Invited Expert)</li>
+		<li>David Fazio (Invited Expert)</li>
+		<li>Wilco Fiers (Deque Systems, Inc.)</li>
+		<li>Detlev Fischer (Invited Expert)</li>
+		<li>John Foliot (Deque Systems, Inc.)</li>
+		<li>Matt Garrish (DAISY Consortium)</li>
+		<li>Alistair Garrison (Level Access)</li>
+		<li>Michael Gower (IBM Corporation)</li>
+		<li>Jon Gunderson</li>
+		<li>Markku Hakkinen (Educational Testing Service)</li>
+		<li>Katie Haritos-Shea (Knowbility, Inc)</li>
+		<li>Andy Heath (Invited Expert)</li>
+		<li>Shawn Henry (W3C)</li>
+		<li>Thomas Hoffman (Educational Testing Service)</li>
+		<li>Sarah Horton (The Paciello Group, LLC)</li>
+		<li>Stefan Johansson (Invited Expert)</li>
+		<li>Marc Johlic (IBM Corporation)</li>
+		<li>Rick Johnson (VitalSource | Ingram Content Group)</li>
+		<li>Crystal Jones (Microsoft Corporation)</li>
+		<li>Andrew Kirkpatrick (Adobe)</li>
+		<li>John Kirkwood (Invited Expert)</li>
+		<li>Jason Kiss (Department of Internal Affairs, New Zealand Government)</li>
+		<li>Maureen Kraft (IBM Corporation)</li>
+		<li>JaEun Ku (University of Illinois at Urbana-Champaign)</li>
+		<li>Patrick Lauke (The Paciello Group, LLC)</li>
+		<li>Shawn Lauriat (Google, Inc.)</li>
+		<li>Steve Lee (Invited Expert)</li>
+		<li>Alex Li (Microsoft Corporation)</li>
+		<li>Chris Loiselle (Invited Expert)</li>
+		<li>Greg Lowney (Invited Expert)</li>
+		<li>Adam Lund (Thomson Reuters)</li>
+		<li>David MacDonald (Invited Expert)</li>
+		<li>Erich Manser (IBM Corporation)</li>
+		<li>Kurt Mattes (Deque Systems, Inc.)</li>
+		<li>Scott McCormack (Level Access)</li>
+		<li>Chris McMeeking (Deque Systems, Inc.)</li>
+		<li>Jan McSorley (Pearson plc)</li>
+		<li>Neil Milliken (Unify Software and Solutions)</li>
+		<li>Rachael Montgomery (Invited Expert)</li>
+		<li>Mary Jo Mueller (IBM Corporation)</li>
+		<li>Brooks Newton (Thomson Reuters)</li>
+		<li>James Nurthen (Oracle Corporation)</li>
+		<li>Joshue O Connor (Invited Expert)</li>
+		<li>Sailesh Panchang (Deque Systems, Inc.)</li>
+		<li>Charu Pandhi (IBM Corporation)</li>
+		<li>Kim Patch (Invited Expert)</li>
+		<li>Melanie Philipp (Deque Systems, Inc.)</li>
+		<li>Mike Pluke (Invited Expert)</li>
+		<li>Ian Pouncey (The Paciello Group, LLC)</li>
+		<li>Ruoxi Ran (W3C)</li>
+		<li>Stephen Repsher (Invited Expert)</li>
+		<li>Jan Richards (Invited Expert)</li>
+		<li>John Rochford (Invited Expert)</li>
+		<li>Marla Runyan (Invited Expert)</li>
+		<li>Stefan Schnabel (SAP SE)</li>
+		<li>Ayelet Seeman (Invited Expert)</li>
+		<li>Lisa Seeman-Kestenbaum (Invited Expert)</li>
+		<li>Glenda Sims (Deque Systems, Inc.)</li>
+		<li>Avneesh Singh (DAISY Consortium)</li>
+		<li>David Sloan (The Paciello Group, LLC)</li>
+		<li>Alan Smith (Invited Expert)</li>
+		<li>Jim Smith (Unify Software and Solutions)</li>
+		<li>Andrew Somers (Invited Expert)</li>
+		<li>Adam Solomon (Invited Expert)</li>
+		<li>Jaeil Song (National Information Society Agency (NIA))</li>
+		<li>Jeanne Spellman (The Paciello Group, LLC)</li>
+		<li>Makoto Ueki (Invited Expert)</li>
+		<li>Jatin Vaishnav (Deque Systems, Inc.)</li>
+		<li>Gregg Vanderheiden (Raising the Floor)</li>
+		<li>Evangelos Vlachogiannis (Fraunhofer Gesellschaft)</li>
+		<li>Kathleen Wahlbin (Invited Expert)</li>
+		<li>Can Wang (Zhejiang University)</li>
+		<li>Léonie Watson (The Paciello Group, LLC)</li>
+		<li>Jason White (Educational Testing Service)</li>
+		<li>Mark Wilcock (Unify Software and Solutions)</li>
+	</ul>
+</section>
+<section id="ack_participants-previous">
+	<h2>Other previously active WCAG WG participants and other contributors to WCAG 2.0, WCAG 2.1, or supporting resources </h2>
+	<p>Paul Adam, Jenae Andershonis, Wilhelm Joys Andersen, Andrew Arch, Avi Arditti, Aries Arditi, Mark Barratt, Mike Barta, Sandy Bartell, Kynn Bartlett, Chris Beer, Charles Belov, Marco Bertoni, Harvey Bingham, Chris Blouch, Paul Bohman, Frederick Boland, Denis Boudreau, Patrice Bourlon, Andy Brown, Dick Brown, Doyle Burnett, Raven Calais, Ben Caldwell, Tomas Caspers, Roberto Castaldo, Sofia Celic-Li, Sambhavi Chandrashekar, Mike Cherim, Jonathan Chetwynd, Wendy Chisholm, Alan Chuter, David M Clark, Joe Clark, Darcy Clarke, James Coltham, Earl Cousins, James Craig, Tom Croucher, Pierce Crowell, Nir Dagan, Daniel Dardailler, Geoff Deering, Sébastien Delorme, Pete DeVasto, Iyad Abu Doush, Sylvie Duchateau, Cherie Eckholm, Roberto Ellero, Don Evans, Gavin Evans, Neal Ewers, Steve Faulkner, Bengt Farre, Lainey Feingold, Wilco Fiers, Michel Fitos, Alan J. Flavell, Nikolaos Floratos, Kentarou Fukuda, Miguel Garcia, P.J. Gardner, Alistair Garrison, Greg Gay, Becky Gibson, Al Gilman, Kerstin Goldsmith, Michael Grade, Karl Groves, Loretta Guarino Reid, Jon Gunderson, Emmanuelle Gutiérrez y Restrepo, Brian Hardy, Eric Hansen, Benjamin Hawkes-Lewis, Sean Hayes, Shawn Henry, Hans Hillen, Donovan Hipke, Bjoern Hoehrmann, Allen Hoffman, Chris Hofstader, Yvette Hoitink, Martijn Houtepen, Carlos Iglesias, Richard Ishida, Jonas Jacek, Ian Jacobs, Phill Jenkins, Barry Johnson, Duff Johnson, Jyotsna Kaki, Shilpi Kapoor, Leonard R. Kasday, Kazuhito Kidachi, Ken Kipness, Johannes Koch, Marja-Riitta Koivunen, Preety Kumar, Kristjan Kure, Andrew LaHart, Gez Lemon, Chuck Letourneau, Aurélien Levy, Harry Loots, Scott Luebking, Tim Lacy, Jim Ley, Alex Li, William Loughborough, N Maffeo, Mark Magennis, Kapsi Maria, Luca Mascaro, Matt May, Sheena McCullagh, Liam McGee, Jens Oliver Meiert, Niqui Merret, Jonathan Metz, Alessandro Miele, Steven Miller, Mathew J Mirabella, Matt May, Marti McCuller, Sorcha Moore, Charles F. Munat, Robert Neff, Charles Nevile, Liddy Nevile, Dylan Nicholson, Bruno von Niman, Tim Noonan, Sebastiano Nutarelli, Graham Oliver, Sean B. Palmer, Devarshi Pant, Nigel Peck, Anne Pemberton, David Poehlman, Ian Pouncey, Charles Pritchard, Kerstin Probiesch, W Reagan, Adam Victor Reed, Chris Reeve, Chris Ridpath, Lee Roberts, Mark Rogers, Raph de Rooij, Gregory J. Rosmaita, Matthew Ross, Sharron Rush, Joel Sanda, Janina Sajka, Roberto Scano, Gordon Schantz, Tim van Schie, Wolf Schmidt, Stefan Schnabel, Cynthia Shelly, Glenda Sims, John Slatin, Becky Smith, Jared Smith, Andi Snow-Weaver, Neil Soiffer, Mike Squillace, Michael Stenitzer, Diane Stottlemyer, Christophe Strobbe, Sarah J Swierenga, Jim Thatcher, Terry Thompson, Justin Thorp, David Todd, Mary Utt, Jean Vanderdonckt, Carlos A Velasco, Eric Velleman, Gijs Veyfeyken, Dena Wainwright, Paul Walsch, Daman Wandke, Richard Warren, Elle Waters, Takayuki Watanabe, Gian Wild, David Wooley, Wu Wei, Kenny Zhang, Leona Zumbo.</p>
+</section>
+<section>
+	<h2>Enabling funders</h2>
+	<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and now under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services or the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+</section>
+            </section>
+           </section>
+        </section>
+      </div>
+    </main>
+    <div class="default-grid">
+      <aside
+        class="box box-icon box-space-above"
+        id="helpimprove"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <header class="box-h box-h-icon box-h-space-above box-h-icon">
+          <svg focusable="false" aria-hidden="true" class="icon-comments">
+            <use
+              xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-comments"
+            ></use>
+          </svg>
+          <h2>Help improve this page</h2>
+        </header>
+        <div class="box-i">
+          <p>
+            Please share your ideas, suggestions, or comments via e-mail to the
+            publicly-archived list
+            <a
+              href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques"
+              >group-ag-chairs@w3.org</a
+            >
+            or via GitHub.
+          </p>
+          <div class="button-group">
+            <a
+              href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]"
+              class="button"
+              ><span>E-mail</span></a
+            >
+            <a
+              href="https://github.com/w3c/wcag/issues/"
+              class="button"
+              ><span>Fork &amp; Edit on GitHub</span></a
+            ><a
+              href="https://github.com/w3c/wcag/issues/new"
+              class="button"
+              ><span>New GitHub Issue</span></a
+            >
+          </div>
+        </div>
+        <div></div>
+      </aside>
+    </div>
+    <footer
+      id="wai-site-footer"
+      class="page-footer default-grid"
+      aria-label="Page"
+    >
+      <div
+        class="inner"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <p><strong>Date:</strong> Published 29 June 2020.</p>
+        <p>
+          <strong>Authors</strong>:
+          <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+          <strong>Editors</strong>:
+          <a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+          <strong>Contributors</strong>:
+          <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>,
+          Eric Eggert, Kevin White, and Daniel Montalvo.
+          <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a>
+          lists additional contributors.
+        </p>
+        <p>
+          Developed by the Education and Outreach Working Group (<a
+            href="http://www.w3.org/WAI/EO/"
+            >EOWG</a
+          >) with support from the
+          <a href="https://www.w3.org/WAI/about/projects/wai-guide/"
+            >WAI-Guide</a
+          >
+          project funded by the European Commission (EC) under the Horizon 2020
+          program (Grant Agreement 822245).
+        </p>
+      </div>
+    </footer>
+    <footer class="site-footer grid-4q" aria-label="Site">
+      <div class="q1-start q3-end about">
+        <div>
+          <p>
+            <a
+              class="largelink"
+              href="https://w3.org/WAI/"
+              dir="auto"
+              translate="no"
+              lang="en"
+              >W3C Web Accessibility Initiative (WAI)</a
+            >
+          </p>
+          <p>
+            Strategies, standards, and supporting resources to make the Web
+            accessible to people with disabilities.
+          </p>
+        </div>
+        <div class="social" dir="auto" translate="no" lang="en">
+          <ul>
+            <li>
+              <a href="https://twitter.com/w3c_wai"
+                ><svg focusable="false" aria-hidden="true" class="icon-twitter">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/feed.xml"
+                ><svg focusable="false" aria-hidden="true" class="icon-rss">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-rss"
+                  ></use>
+                </svg>
+                Feed</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv"
+                ><svg focusable="false" aria-hidden="true" class="icon-youtube">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-youtube"
+                  ></use>
+                </svg>
+                YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/news/subscribe/" class="button"
+                >Get News in Email</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div dir="auto" translate="no" lang="en">
+          <p>
+            Copyright © 2019 W3C <sup>®</sup> (<a
+              href="https://www.csail.mit.edu/"
+              ><abbr title="Massachusetts Institute of Technology">MIT</abbr></a
+            >,
+            <a href="https://www.ercim.eu/"
+              ><abbr
+                title="European Research Consortium for Informatics and Mathematics"
+                >ERCIM</abbr
+              ></a
+            >, <a href="https://www.keio.ac.jp/">Keio</a>,
+            <a href="https://ev.buaa.edu.cn">Beihang</a>)
+            <a href="https://w3.org/WAI/about/using-wai-material/"
+              >Permission to Use WAI Material</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+        <ul style="margin-bottom: 0;">
+          <li>
+            <a href="https://w3.org/WAI/about/contacting/">Contact WAI</a>
+          </li>
+          <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+          <li><a href="https://w3.org/WAI/news/">News</a></li>
+          <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+          <li>
+            <a href="https://w3.org/WAI/about/accessibility-statement/"
+              >Accessibility Statement</a
+            >
+          </li>
+          <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+          <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+      var tooltips = document.querySelectorAll('[data-tooltip-content]');
+
+      for (i = 0, length = tooltips.length; i < length; i++) {
+        var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+        var content = document.querySelector(contentPointer).innerHTML;
+        
+        tippy(tooltips[i], {
+          content: content,
+          allowHTML: true,
+          interactive: true,
+        });
+      }
+    </script>
+    <style>
+      [data-tooltip-content] {
+        padding: 0;
+        background: none;
+        border: 0;
+        color: black;
+        font-size: inherit;
+        vertical-align: middle;
+      }
+      [data-tooltip-content]:hover {
+        background: none;
+        color: var(--light-blue);
+      }
+      [data-tippy-root] {
+        padding: 0 2em;
+      }
+      dt div {
+        font-weight: normal;
+      }
+    </style>
+  </body>
+</html>
