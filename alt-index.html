@@ -101,7 +101,7 @@
   <a lang="en" href="https://www.w3.orghttps://w3.org/WAI/WCAG21/quickref/" class="page-link"><span>How to Meet WCAG 2 (Quick Reference)</span></a></li><li>
   <a lang="en" href="https://w3.org/WAI/standards-guidelines/wcag/glance/" class="page-link"><span>At a Glance</span></a></li>
           <li>
-  <a lang="en" href="javascript:alert('This page does not exist, just highlighted as current for prototype reasons')" aria-current="page" class="page-link"><span>WCAG 2 Guidance</span></a></li><li>
+  <a lang="en" href="javascript:alert('This page does not exist, just highlighted as current for prototype reasons')" aria-current="page" class="page-link"><span>The Documents</span></a></li><li>
   <a lang="en" href="https://w3.org/WAI/standards-guidelines/wcag/new-in-22/" class="page-link"><span>New in 2.2 Draft</span></a></li><li>
   <a lang="en" href="https://w3.org/WAI/standards-guidelines/wcag/new-in-21/" class="page-link"><span>New in 2.1</span></a></li><li>
   <a lang="en" href="https://w3.org/WAI/standards-guidelines/wcag/translations/" class="page-link"><span>Translations</span></a></li><li>
@@ -220,12 +220,12 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
 
   <main id="main" lang="en">
     <header>
-      <h1>WCAG 2 Guidance</h1></header>
+      <h1>The Documents</h1></header>
 <aside class="box box-full"><header class="box-h  box-h-full"> <h2> Summary </h2></header><div class="box-i">
 
-<p>This page shows the different kinds of guidance that exist for the Web Content Accessibility Guidelines (WCAG) 2. It helps you know where to go for which type of information.</p>
+<p>This page shows the different kinds of supporting documents that come with the Web Content Accessibility Guidelines (WCAG) 2. In <a href="http://www.w3.org/WAI/WCAG21/quickref/">How to meet WCAG 2 (Quick Reference)</a>, you can browse WCAG and filter for these supporting documents.</p>
 
-<p>For background and an introduction to WCAG, see <a href="/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a>.</p>
+<p>For background and an introduction to WCAG, see <a href="/WAI/standards-guidelines/wcag/">WCAG Overview</a>.</p>
 
 </div></aside>
 <nav class="box box-simple box-simple" aria-labelledby="tocheading" id="toc">
@@ -236,11 +236,16 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
 
 
 <ul id="markdown-toc">
-    <li><a href="#sufficient-techniques">Sufficient Techniques</a>   
-    </li>
-    <li><a href="#advisory-techniques">Advisory Techniques</a>   
-    </li>
-    <li><a href="#failure-techniques">Failure Techniques</a>   
+    <li>
+      <a href="#techniques">Techniques</a>
+      <ul>
+        <li><a href="#sufficient-techniques">Sufficient Techniques</a>   
+        </li>
+        <li><a href="#advisory-techniques">Advisory Techniques</a>   
+        </li>
+        <li><a href="#failure-techniques">Failure Techniques</a>   
+        </li>
+      </ul>
     </li>
     <li><a href="#understanding">Understanding documents</a>   
     </li>
@@ -255,7 +260,9 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
   </div>
 </nav>
 
-<h2 id="sufficient-techniques">Sufficient Techniques</h2>
+<h2 id="techniques">Techniques</h2>
+
+<h3 id="sufficient-techniques">Sufficient Techniques</h3>
 <p><b>Sufficient Techniques</b> are examples of ways to meet a WCAG Success Criterion. If you follow a Sufficient Technique for a given WCAG Success Criterion, you will meet that criterion.</p>
 <ul class="examples">
 	<li>
@@ -279,8 +286,8 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
 	</li>
 </ul>
 
-<h2 id="advisory-techniques">Advisory Techniques</h2>
-<p><b>Advisory Techniques</b> are examples of accessibility best practices. They can be experimental and do not guarantee conformance with a Success Criterion.</p>
+<h3 id="advisory-techniques">Advisory Techniques</h3>
+<p><b>Advisory Techniques</b> are examples of accessibility best practices. They do not guarantee you meet a Success Criterion, but will likely benefit your users.</p>
 <ul class="examples">
 	<li>
 		<a href="2020-09-22-technique-advisory.html" class="example">
@@ -296,7 +303,7 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
 	</li>
 </ul>
 
-<h2 id="failure-techniques">Failure Techniques</h2>
+<h3 id="failure-techniques">Failure Techniques</h3>
 <p><b>Failure Techniques</b> are examples of what constitutes a failure to meet a WCAG Success Criterion.</p>
 <ul class="examples">
 	<li>
@@ -374,33 +381,6 @@ h2 a { margin-left: auto; margin-bottom: 2px; }
 		</a>
 	</li>
 </ul>
-
-<aside class="box"><header class="box-h "> <h2 id="getting-from-one-document-to-the-other">Getting from one document to the other</h2>
-</header><div class="box-i">
-<p>The WCAG 2 documents are interlinked. For example:</p>
-
-<ul>
-  <li>In WCAG 2,
-    <ul>
-      <li>Links such as “How to Meet 1.1.1” go to the <strong>How to Meet WCAG 2</strong> document, and jumps down to that section within the document.</li>
-      <li>Links such as “Understanding 1.1.1” links go to an <strong>Understanding WCAG 2</strong> topic page.
-        <ul>
-          <li>You can get to the <a href="https://www.w3.org/WAI/WCAG21/Understanding/#understanding-pages">Contents list of all the Understanding topics</a> from the [Contents] button at the top.</li>
-          <li>You can get all the topics in one large web page from the “single HTML version” link in the footer of each topic page.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>In both How to Meet WCAG 2 and Understanding WCAG 2, there are lists of techniques that are links. These links go to a <strong>Techniques for WCAG 2</strong> topic page.
-    <ul>
-      <li>You can get to the <a href="https://www.w3.org/WAI/WCAG21/Techniques/#techniques">Contents list of all the Techniques topics</a> from the [Contents] button at the top.</li>
-      <li>You can get all the topics in one large web page from the “single HTML version” link in the footer of each topic page.</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://w3.org/WAI/content-images/wai-intro-wcag/wcag20links-docs.png" alt="diagram of documents described in the text"><br>
-Figure 2: Example of links between documents</p>
 
 <h2 id="additional-resources">Additional Resources</h2>
 
