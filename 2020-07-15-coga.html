@@ -1,87 +1,47 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Prototype: COGA Guidance | W3C WAI</title>
-    <link
-      rel="stylesheet"
-      href="https://w3.org/WAI/assets/css/style.css?1573220675560713000"
-    />
-    <link
-      rel="stylesheet"
-      href="https://w3.org/WAI/atag/report-tool/build/bundle.css"
-    />
-    <script
-      type="text/javascript"
-      async=""
-      defer=""
-      src="//www.w3.org/analytics/piwik/piwik.js"
-    ></script>
+    <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
+    <link rel="stylesheet" href="https://w3.org/WAI/atag/report-tool/build/bundle.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" async="" defer="" src="//www.w3.org/analytics/piwik/piwik.js"></script>
     <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
-    <style>
-      main {
-        display: block;
-        padding: 32px 0;
-        background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
-      }
-      .nav__item a {
-        display: inline-block;
-      }
-      .nav__item a + button {
-        margin-left: -0.75em;
-        margin-right: 1em;;
-      }      
-      .tool-header {
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 8;
-        -ms-grid-row: 1;
-        grid-column: 2 / 10;
-        max-height: 3em;
-      }
-    </style>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
     <link rel="stylesheet" href="/a11y-light.css" />
 
-  </head>
-  <body>
+</head>
+
+<body>
     <header id="site-header" class="default-grid with-gap">
-      <div class="tool-header">
-        <span class="tool-header-name">Design Patterns for Cognitive Accessibility</span>
-        <div class="tool-header-logo">
-          <a href="http://w3.org/">
-            <img
-              alt="W3C"
-              src="https://w3.org/WAI/atag/report-tool/images/w3c.svg"
-              width="92"
-              height="44"
-            />
-          </a>
-          <a href="http://w3.org/WAI/">
-            <img
-              alt="Web Accessibility Initiative"
-              src="https://w3.org//WAI/atag/report-tool/images/wai.svg"
-            />
-          </a>
+        <div class="tool-header">
+            <span class="tool-header-name">Design Patterns for Cognitive Accessibility</span>
+            <div class="tool-header-logo">
+                <a href="http://w3.org/">
+                    <img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" />
+                </a>
+                <a href="http://w3.org/WAI/">
+                    <img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" />
+                </a>
+            </div>
         </div>
-      </div>
     </header>
     <main>
-      <div id="conformance-tool" class="default-grid leftcol">
-        <!-- app 'renders' here -->
-        <div
-          style="display: none;"
-          aria-hidden="true"
-          data-svnav-router="0"
-        ></div>
-        <nav class="nav svelte-3wzt7m" aria-label="Steps">
-          <ul class="svelte-3wzt7m">
-            <li class="nav__item">
-              <a href="https://w3c.github.io/coga/content-usable/">All COGA Design Patterns</a>
-            </li>
-            <li class="nav__item">
-              <a href="alt-index.html">All WCAG 2.1 Guidance</a>
-              <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
+        <div id="conformance-tool" class="default-grid leftcol">
+            <!-- app 'renders' here -->
+            <div style="display: none;" aria-hidden="true" data-svnav-router="0"></div>
+            <nav class="nav svelte-3wzt7m" aria-label="Steps">
+                <ul class="svelte-3wzt7m">
+                    <li class="nav__item">
+                        <a href="https://w3c.github.io/coga/content-usable/">All COGA Design Patterns</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="alt-index.html">All WCAG 2.1 Guidance</a>
+                        <button style="display: inline" type="button" data-tooltip-content="#explain-supporting-documents">
                 <span class="visuallyhidden">Explain rule types</span>
                 <span aria-hidden="true" class="more-info__icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
@@ -89,71 +49,73 @@
                 </svg>
                 </span>
               </button>
-              <div id="explain-supporting-documents" hidden>
-                <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
-                <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <section class="app-content svelte-1ecbihu" aria-label="Main content">
- 
-          <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Pattern: </span> 
-            Make the Purpose of Your Page Clear</h1>
-            <h2>User Need</h2>
-            <p>I can easily see the context and purpose of the page.</p>
-            <h2>Description</h2>
-            <p> Use a clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities. </p>
-            <h2>How it Helps</h2>
-            <p> This helps many people, including those with poor memory and attention as well as anyone who is easily distracted due to age-appropriate forgetfulness and Attention-Deficit/Hyperactivity Disorder.</p>
-            <p>For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. A clear heading at the top of each page shows clearly what the page is about and what they are doing.</p>
-            <p>In another example, a user with Attention-Deficit/Hyperactivity Disorder is looking for information in a video. They can tell by the video title that this video is has the information they need.</p>
-            <h2>More Details</h2>
-            <p>Headings need to clarify the purpose of this specific page.</p>
-            <p>When possible, provide information to help users understand how they got to the page. For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc.)</p>
-            <h2>Examples</h2>
-            <h3>Use</h3>
-            <ul>
-              <li>Headings tell me exactly where I am.</li>
-            </ul>
-            <h3>Avoid</h3>
-            <ul>
-              <li>Headings do not clarify the steps in a form;</li>
-              <li> A page heading reads "Service not available." The user has to remember what they were doing to know what service this is about. </li>
-            </ul>
-          </section>
-        <aside
-          class="your-report svelte-60ir8u your-report--expanded sidebar"
-          tabindex="-1"
-        >
-        <style>.sidebar ul { padding: 0;} .sidebar li { margin-left: 1em; } </style>
-        <h2 style="margin-top: 0">About this page</h2>
-        <p><em>COGA Design Patterns</em> are supplemental guidance beyond the requirements of WCAG.</p>
-        <style>dd { margin-left: 0!important; }</style>
-        </aside>
-      </div>
+                        <div id="explain-supporting-documents" hidden>
+                            <p>WCAG comes with a number of supporting documents, including Techniques and Understanding documents.</p>
+                            <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <section class="app-content svelte-1ecbihu" aria-label="Main content">
+
+                <h1 style="max-width: 14em"><span style="display: block; font-size: .5em; margin-bottom: 0.25em;">Pattern: </span> Make the Purpose of Your Page Clear</h1>
+                <h2>User Need</h2>
+                <p>I can easily see the context and purpose of the page.</p>
+                <h2>Description</h2>
+                <p> Use a clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities. </p>
+                <h2>How it Helps</h2>
+                <p> This helps many people, including those with poor memory and attention as well as anyone who is easily distracted due to age-appropriate forgetfulness and Attention-Deficit/Hyperactivity Disorder.</p>
+                <p>For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. A clear heading at the top of each page shows clearly what the
+                    page is about and what they are doing.</p>
+                <p>In another example, a user with Attention-Deficit/Hyperactivity Disorder is looking for information in a video. They can tell by the video title that this video is has the information they need.</p>
+                <h2>More Details</h2>
+                <p>Headings need to clarify the purpose of this specific page.</p>
+                <p>When possible, provide information to help users understand how they got to the page. For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc.)</p>
+                <h2>Examples</h2>
+                <h3>Use</h3>
+                <ul>
+                    <li>Headings tell me exactly where I am.</li>
+                </ul>
+                <h3>Avoid</h3>
+                <ul>
+                    <li>Headings do not clarify the steps in a form;</li>
+                    <li> A page heading reads "Service not available." The user has to remember what they were doing to know what service this is about. </li>
+                </ul>
+            </section>
+            <aside class="your-report svelte-60ir8u your-report--expanded sidebar" tabindex="-1">
+                <style>
+                    .sidebar ul {
+                        padding: 0;
+                    }
+                    
+                    .sidebar li {
+                        margin-left: 1em;
+                    }
+                </style>
+                <h2 style="margin-top: 0">About this page</h2>
+                <p><em>COGA Design Patterns</em> are supplemental guidance beyond the requirements of WCAG.</p>
+                <style>
+                    dd {
+                        margin-left: 0!important;
+                    }
+                </style>
+            </aside>
+        </div>
     </main>
     <div class="default-grid">
-      <aside
-        class="box box-icon box-space-above"
-        id="helpimprove"
-        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
-      >
-        <header class="box-h box-h-icon box-h-space-above box-h-icon">
-          <svg focusable="false" aria-hidden="true" class="icon-comments">
+        <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+                <svg focusable="false" aria-hidden="true" class="icon-comments">
             <use
               xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-comments"
             ></use>
           </svg>
-          <h2>Help improve this page</h2>
-        </header>
-        <div class="box-i">
-          <p>
-            Please share your ideas, suggestions, or comments via e-mail to the
-            publicly-archived list
-            <a
-              href="mailto:wai-eo-editors@w3.org?subject=[en]%20Accessibility%20Fundamentals%20Overview"
-              >wai-eo-editors@w3.org</a
+                <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+                <p>
+                    Please share your ideas, suggestions, or comments via e-mail to the publicly-archived list
+                    <a href="mailto:wai-eo-editors@w3.org?subject=[en]%20Accessibility%20Fundamentals%20Overview">wai-eo-editors@w3.org</a
             >
             or via GitHub.
           </p>
@@ -190,18 +152,14 @@
         <p>
           <strong>Developer and Editor</strong>:
           <a href="https://www.w3.org/People/hidde/">Hidde de Vries</a>.
-          <strong>Project Lead</strong>:
-          <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a>.
-          <strong>Contributors</strong>:
-          <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>,
-          Eric Eggert, Kevin White, and Daniel Montalvo.
-          <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a>
-          lists additional contributors.
-        </p>
-        <p>
-          Developed by the Education and Outreach Working Group (<a
-            href="http://www.w3.org/WAI/EO/"
-            >EOWG</a
+                    <strong>Project Lead</strong>:
+                    <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a>.
+                    <strong>Contributors</strong>:
+                    <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>, Eric Eggert, Kevin White, and Daniel Montalvo.
+                    <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a> lists additional contributors.
+                </p>
+                <p>
+                    Developed by the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a
           >) with support from the
           <a href="https://www.w3.org/WAI/about/projects/wai-guide/"
             >WAI-Guide</a
@@ -281,9 +239,8 @@
                 >ERCIM</abbr
               ></a
             >, <a href="https://www.keio.ac.jp/">Keio</a>,
-            <a href="https://ev.buaa.edu.cn">Beihang</a>)
-            <a href="https://w3.org/WAI/about/using-wai-material/"
-              >Permission to Use WAI Material</a
+                    <a href="https://ev.buaa.edu.cn">Beihang</a>)
+                    <a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a
             >.
           </p>
         </div>
@@ -292,55 +249,58 @@
         <ul style="margin-bottom: 0;">
           <li>
             <a href="https://w3.org/WAI/about/contacting/">Contact WAI</a>
-          </li>
-          <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
-          <li><a href="https://w3.org/WAI/news/">News</a></li>
-          <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
-          <li>
-            <a href="https://w3.org/WAI/about/accessibility-statement/"
-              >Accessibility Statement</a
+                    </li>
+                    <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+                    <li><a href="https://w3.org/WAI/news/">News</a></li>
+                    <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+                    <li>
+                        <a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a
             >
           </li>
           <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
-          <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
-        </ul>
-      </div>
-    </footer>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-    <script>
-      var tooltips = document.querySelectorAll('[data-tooltip-content]');
+                    <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+                    </ul>
+            </div>
+            </footer>
+            <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+            <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+            <script>
+                var tooltips = document.querySelectorAll('[data-tooltip-content]');
 
-      for (i = 0, length = tooltips.length; i < length; i++) {
-        var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
-        var content = document.querySelector(contentPointer).innerHTML;
-        
-        tippy(tooltips[i], {
-          content: content,
-          allowHTML: true,
-          interactive: true,
-        });
-      }
-    </script>
-    <style>
-      [data-tooltip-content] {
-        padding: 0;
-        background: none;
-        border: 0;
-        color: black;
-        font-size: inherit;
-        vertical-align: middle;
-      }
-      [data-tooltip-content]:hover {
-        background: none;
-        color: var(--light-blue);
-      }
-      [data-tippy-root] {
-        padding: 0 2em;
-      }
-      dt div {
-        font-weight: normal;
-      }
-    </style>
-  </body>
+                for (i = 0, length = tooltips.length; i < length; i++) {
+                    var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+                    var content = document.querySelector(contentPointer).innerHTML;
+
+                    tippy(tooltips[i], {
+                        content: content,
+                        allowHTML: true,
+                        interactive: true,
+                    });
+                }
+            </script>
+            <style>
+                [data-tooltip-content] {
+                    padding: 0;
+                    background: none;
+                    border: 0;
+                    color: black;
+                    font-size: inherit;
+                    vertical-align: middle;
+                }
+                
+                [data-tooltip-content]:hover {
+                    background: none;
+                    color: var(--light-blue);
+                }
+                
+                [data-tippy-root] {
+                    padding: 0 2em;
+                }
+                
+                dt div {
+                    font-weight: normal;
+                }
+            </style>
+</body>
+
 </html>
