@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prototype: About ACT Rules | W3C WAI</title>
+    <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
+    <link rel="stylesheet" href="https://w3.org/WAI/atag/report-tool/build/bundle.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" async="" defer="" src="//www.w3.org/analytics/piwik/piwik.js"></script>
+    <script defer="" src="/WAI/atag/report-tool/build/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <link rel="stylesheet" href="/a11y-light.css" />
+</head>
+
+<body>
+    <header id="site-header" class="default-grid with-gap">
+        <div class="tool-header">
+            <span class="tool-header-name"><a href="2020-10-13-all.html">WCAG 2.1: ACT Rules</a></span>
+            <div class="tool-header-logo">
+                <a href="http://w3.org/">
+                    <img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" />
+                </a>
+                <a href="http://w3.org/WAI/">
+                    <img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="conformance-tool" class="default-grid leftcol">
+            <!-- app 'renders' here -->
+            <div style="display: none;" aria-hidden="true" data-svnav-router="0"></div>
+            <nav class="nav svelte-3wzt7m" aria-label="Steps">
+                <ul class="svelte-3wzt7m">
+                    <li class="nav__item">
+                        <a href="2020-10-20-about-act.html" class="active">About <abbr title="Accessibility Conformance Testing">ACT</abbr> Rules</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="2020-10-13-all-act.html">All ACT Rules</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="alt-index.html" target="_blank">All WCAG 2 Guidance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+<path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+</svg></a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="app-content svelte-1ecbihu" aria-label="Main content">
+
+                <h1>About ACT Rules</h1>
+                <div class="doc-note-box">
+                    <p><strong>Editor's note</strong> suggestions for this page welcomed. See also <a href="https://www.w3.org/WAI/standards-guidelines/act/">ACT page on WAI site</a></p>
+
+                </div>
+                <section id="introduction">
+                    <aside class="box box-full">
+                        <header class="box-h  box-h-full">
+                            <h2> Summary </h2>
+                        </header>
+                        <div class="box-i">
+
+                            <p>This page introduces the <a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format</a> and lists ACT Rules formally published by W3C.</p>
+
+                        </div>
+                    </aside>
+
+
+
+                    <nav class="box box-simple" aria-labelledby="tocheading" id="toc">
+                        <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
+                        <div class="box-i">
+
+
+
+
+                            <ul id="markdown-toc">
+                                <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+                                <li><a href="#who-act-is-for" id="markdown-toc-who-act-is-for">Who ACT is for</a></li>
+                                <li><a href="#what-is-in-act" id="markdown-toc-what-is-in-act">What is in ACT</a></li>
+                                <li><a href="#who-develops-act" id="markdown-toc-who-develops-act">Who develops ACT</a></li>
+                                <li><a href="#additional-information" id="markdown-toc-additional-information">Additional information</a></li>
+                            </ul>
+
+
+
+                        </div>
+                    </nav>
+
+
+
+                    <h2 id="introduction">Introduction</h2>
+
+                    <p>The purpose of the Accessibility Conformance Testing (ACT) effort is to establish and document rules for testing the conformance of web content to accessibility standards, such as Web Content Accessibility Guidelines (WCAG). These
+                        test rules address automated, semi-automated, and manual testing. ACT makes accessibility testing more transparent, and thus reduces confusion caused by different interpretations of accessibility guidelines.</p>
+
+                    <h2 id="who-act-is-for">Who ACT is for</h2>
+
+                    <p>The primary audience of Accessibility Conformance Testing (ACT) is developers of accessibility evaluation methodologies and testing tools. They write, share, and implement ACT Rules into their products and services.</p>
+
+                    <p>A secondary audience is accessibility experts. They often assist in setting an organization’s accessibility policy, and it is important for them to know what ACT Rules do, and how they relate to their own requirements.</p>
+
+                    <p>Who ACT is <strong>not</strong> for: Users of accessibility tools (web developers, content authors, QA testers, etc.) are not expected to read ACT. These audiences will use products and services that implement ACT Rules.</p>
+
+                    <h2 id="what-is-in-act">What is in ACT</h2>
+
+                    <h3 id="act-rules-format-10">ACT Rules Format 1.0</h3>
+
+                    <p><strong><a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format 1.0</a></strong> is a W3C Recommendation (web standard) that defines a format for writing test rules. The latest
+                        <a href="https://w3c.github.io/wcag-act/act-rules-format.html">Editor Draft</a> and <a href="https://github.com/w3c/wcag-act/">GitHub repository</a> are available for future development.</p>
+
+                    <h4 id="technical-document-format">Technical document format</h4>
+
+                    <p>The ACT Rules Format follows the W3C format for technical specifications, which includes several sections at the beginning: links to different versions, editors, copyright, abstract, and status with the link to errata and the email
+                        address for comments. Most WAI specifications have a link at the top to the Table of Contents.</p>
+
+                    <h3 id="act-rules-repository">ACT Rules Repository</h3>
+
+                    <p>Currently, W3C published the following set of rules:</p>
+
+                    <ul>
+                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-has-title-2779a5/">HTML Page has Title</a></li>
+                        <li><a href="/WAI/standards-guidelines/act/rules/image-button-accessible-name-59796f/">Image button has accessible name</a></li>
+                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-b5c3f8/">HTML page has <code class="language-plaintext highlighter-rouge">lang</code> attribute</a></li>
+                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-valid-bf051a/">HTML page language is valid</a></li>
+                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-xml-lang-match-5b7ae0/">HTML page lang and xml:lang attributes have matching values</a></li>
+                    </ul>
+
+                    <p>More rules are expected in the coming period. The <a href="https://www.w3.org/community/act-r/">ACT Rules Community Group</a> developed over <a href="https://act-rules.github.io/rules/">50 rules</a>, many of which will be submitted
+                        to W3C for review and approval. Other entities can also contribute candidate rules for review and approval.</p>
+
+                    <h4 id="future-of-act-rules">Future of ACT Rules</h4>
+
+                    <p>We expect more ACT Rules to be formally published by W3C as further candidate rules are contributed by the community. Contact <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a> for questions on how to contribute candidate
+                        rules and participate in the review process of ACT Rules.</p>
+
+                    <h2 id="who-develops-act">Who develops ACT</h2>
+
+                    <p>The <a href="https://www.w3.org/WAI/GL/task-forces/conformance-testing/">ACT Task Force</a> of the W3C Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">AGWG</a>) develops the <a href="https://www.w3.org/TR/act-rules-format/">ACT Rules Format</a>                        specification. The ACT Task Force also reviews test rules contributed by the community in first instance. Formal publication of the ACT Rules Format specification and of ACT Rules listed on this page is made by AGWG.</p>
+
+                    <p>The <a href="https://www.w3.org/community/act-r/">ACT Rules Community Group</a> develops test rules according to the ACT Rules Format specification. These rules by the community group do not have any formal standing in the W3C process.
+                    </p>
+
+                    <p>Opportunities for contributing to ACT and other WAI work are introduced in <a href="/WAI/participation">Participating in WAI</a>.</p>
+
+                    <h2 id="additional-information">Additional information</h2>
+
+                    <p>For more information, see:</p>
+                    <ul>
+                        <li><a href="https://www.w3.org/blog/2019/10/calibrate-your-accessibility-evaluation-with-act/">Calibarate Your Accessibility Evaluation with ACT blog post</a></li>
+                        <li><a href="https://www.w3.org/blog/2019/07/harmonized-accessibility-testing/">Harmonized Accessibility Testing blog post</a></li>
+                        <li><a href="https://act-rules.github.io/">ACT Rules Community Group GitHub workspace</a></li>
+                    </ul>
+
+
+                </section>
+        </div>
+    </main>
+    <div class="default-grid">
+        <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+                <svg focusable="false" aria-hidden="true" class="icon-comments">
+            <use
+              xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-comments"
+            ></use>
+          </svg>
+                <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+                <p>
+                    Please share your ideas, suggestions, or comments via e-mail to the publicly-archived list
+                    <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a
+            >
+            or via GitHub.
+          </p>
+          <div class="button-group">
+            <a
+              href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]"
+              class="button"
+              ><span>E-mail</span></a
+            >
+            <a
+              href="https://github.com/w3c/wcag/issues/"
+              class="button"
+              ><span>Fork &amp; Edit on GitHub</span></a
+            ><a
+              href="https://github.com/w3c/wcag/issues/new"
+              class="button"
+              ><span>New GitHub Issue</span></a
+            >
+          </div>
+        </div>
+        <div></div>
+      </aside>
+    </div>
+    <footer
+      id="wai-site-footer"
+      class="page-footer default-grid"
+      aria-label="Page"
+    >
+      <div
+        class="inner"
+        style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;"
+      >
+        <p><strong>Date:</strong> Published 29 June 2020.</p>
+        <p>
+          <strong>Authors</strong>:
+          <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+                    <strong>Editors</strong>:
+                    <a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+                    <strong>Contributors</strong>:
+                    <a href="https://www.w3.org/People/Shawn/">Shawn Lawton Henry</a>, Eric Eggert, Kevin White, and Daniel Montalvo.
+                    <a href="/WAI/atag/report-tool/acknowledgements">Acknowledgements</a> lists additional contributors.
+                </p>
+                <p>
+                    Developed by the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a
+          >) with support from the
+          <a href="https://www.w3.org/WAI/about/projects/wai-guide/"
+            >WAI-Guide</a
+          >
+          project funded by the European Commission (EC) under the Horizon 2020
+          program (Grant Agreement 822245).
+        </p>
+      </div>
+    </footer>
+    <footer class="site-footer grid-4q" aria-label="Site">
+      <div class="q1-start q3-end about">
+        <div>
+          <p>
+            <a
+              class="largelink"
+              href="https://w3.org/WAI/"
+              dir="auto"
+              translate="no"
+              lang="en"
+              >W3C Web Accessibility Initiative (WAI)</a
+            >
+          </p>
+          <p>
+            Strategies, standards, and supporting resources to make the Web
+            accessible to people with disabilities.
+          </p>
+        </div>
+        <div class="social" dir="auto" translate="no" lang="en">
+          <ul>
+            <li>
+              <a href="https://twitter.com/w3c_wai"
+                ><svg focusable="false" aria-hidden="true" class="icon-twitter">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-twitter"
+                  ></use>
+                </svg>
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/feed.xml"
+                ><svg focusable="false" aria-hidden="true" class="icon-rss">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-rss"
+                  ></use>
+                </svg>
+                Feed</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv"
+                ><svg focusable="false" aria-hidden="true" class="icon-youtube">
+                  <use
+                    xlink:href="/WAI/atag/report-tool/images/icons.svg#icon-youtube"
+                  ></use>
+                </svg>
+                YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://w3.org/WAI/news/subscribe/" class="button"
+                >Get News in Email</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div dir="auto" translate="no" lang="en">
+          <p>
+            Copyright © 2019 W3C <sup>®</sup> (<a
+              href="https://www.csail.mit.edu/"
+              ><abbr title="Massachusetts Institute of Technology">MIT</abbr></a
+            >,
+            <a href="https://www.ercim.eu/"
+              ><abbr
+                title="European Research Consortium for Informatics and Mathematics"
+                >ERCIM</abbr
+              ></a
+            >, <a href="https://www.keio.ac.jp/">Keio</a>,
+                    <a href="https://ev.buaa.edu.cn">Beihang</a>)
+                    <a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+        <ul style="margin-bottom: 0;">
+          <li>
+            <a href="https://w3.org/WAI/about/contacting/">Contact WAI</a>
+                    </li>
+                    <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+                    <li><a href="https://w3.org/WAI/news/">News</a></li>
+                    <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+                    <li>
+                        <a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a
+            >
+          </li>
+          <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+                    <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+                    </ul>
+            </div>
+            </footer>
+            <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+            <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+            <script>
+                var tooltips = document.querySelectorAll('[data-tooltip-content]');
+
+                for (i = 0, length = tooltips.length; i < length; i++) {
+                    var contentPointer = tooltips[i].getAttribute('data-tooltip-content');
+                    var content = document.querySelector(contentPointer).innerHTML;
+
+                    tippy(tooltips[i], {
+                        content: content,
+                        allowHTML: true,
+                        interactive: true,
+                    });
+                }
+            </script>
+            <style>
+                [data-tooltip-content] {
+                    padding: 0;
+                    background: none;
+                    border: 0;
+                    color: black;
+                    font-size: inherit;
+                    vertical-align: middle;
+                }
+                
+                [data-tooltip-content]:hover {
+                    background: none;
+                    color: var(--light-blue);
+                }
+                
+                [data-tippy-root] {
+                    padding: 0 2em;
+                }
+                
+                dt div {
+                    font-weight: normal;
+                }
+            </style>
+</body>
+
+</html>
