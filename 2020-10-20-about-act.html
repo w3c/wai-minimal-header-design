@@ -50,111 +50,35 @@
             <section class="app-content svelte-1ecbihu" aria-label="Main content">
 
                 <h1>About ACT Rules</h1>
-                <div class="doc-note-box">
-                    <p><strong>Editor's note</strong> suggestions for this page welcomed. See also <a href="https://www.w3.org/WAI/standards-guidelines/act/">ACT page on WAI site</a></p>
-
-                </div>
                 <section id="introduction">
-                    <aside class="box box-full">
-                        <header class="box-h  box-h-full">
-                            <h2> Summary </h2>
-                        </header>
-                        <div class="box-i">
+                    <p>This set of <em>Accessibility Conformance Testing (ACT) Rules</em> provides guidance for developers of automated testing tools and manual testing methodologies for <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>. It is part of a series of technical guidance published by the W3C Web Accessibility Initiative (WAI) to support WCAG 2.1. For an introduction to WCAG, supporting technical guidance, and educational material, see <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG) Overview</a>.</p>
 
-                            <p>This page introduces the <a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format</a> and lists ACT Rules formally published by W3C.</p>
+                    <p>WCAG 2.1 itself is a stable document that does not change. This set of <em>ACT Rules</em> is updated periodically to cover more current best practices and changes in technologies and tools.</p>
 
-                        </div>
-                    </aside>
+                    <p>ACT Rules are informative — that means they are not required. The basis for determining conformance to WCAG 2.1 is the success criteria from the <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 standard</a> — not the ACT Rules.</p>
 
+                    <p>This set of <em>ACT Rules</em> is not intended to be used as a stand-alone resource. Instead, it is expected that developers of automated testing tools and manual testing methodologies will usually use <a href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG 2.1: A customizable quick reference</a> to read the WCAG success criteria, and follow links from there to specific topics in Understanding WCAG 2.1, specific techniques, and ACT Rules.</p>
 
-
-                    <nav class="box box-simple" aria-labelledby="tocheading" id="toc">
-                        <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
-                        <div class="box-i">
-
-
-
-
-                            <ul id="markdown-toc">
-                                <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-                                <li><a href="#who-act-is-for" id="markdown-toc-who-act-is-for">Who ACT is for</a></li>
-                                <li><a href="#what-is-in-act" id="markdown-toc-what-is-in-act">What is in ACT</a></li>
-                                <li><a href="#who-develops-act" id="markdown-toc-who-develops-act">Who develops ACT</a></li>
-                                <li><a href="#additional-information" id="markdown-toc-additional-information">Additional information</a></li>
-                            </ul>
-
-
-
-                        </div>
-                    </nav>
-
-
-
-                    <h2 id="introduction">Introduction</h2>
-
-                    <p>The purpose of the Accessibility Conformance Testing (ACT) effort is to establish and document rules for testing the conformance of web content to accessibility standards, such as Web Content Accessibility Guidelines (WCAG). These
-                        test rules address automated, semi-automated, and manual testing. ACT makes accessibility testing more transparent, and thus reduces confusion caused by different interpretations of accessibility guidelines.</p>
-
-                    <h2 id="who-act-is-for">Who ACT is for</h2>
-
-                    <p>The primary audience of Accessibility Conformance Testing (ACT) is developers of accessibility evaluation methodologies and testing tools. They write, share, and implement ACT Rules into their products and services.</p>
-
-                    <p>A secondary audience is accessibility experts. They often assist in setting an organization’s accessibility policy, and it is important for them to know what ACT Rules do, and how they relate to their own requirements.</p>
-
-                    <p>Who ACT is <strong>not</strong> for: Users of accessibility tools (web developers, content authors, QA testers, etc.) are not expected to read ACT. These audiences will use products and services that implement ACT Rules.</p>
-
-                    <h2 id="what-is-in-act">What is in ACT</h2>
-
-                    <h3 id="act-rules-format-10">ACT Rules Format 1.0</h3>
-
-                    <p><strong><a href="https://www.w3.org/TR/act-rules-format/">Accessibility Conformance Testing (ACT) Rules Format 1.0</a></strong> is a W3C Recommendation (web standard) that defines a format for writing test rules. The latest
-                        <a href="https://w3c.github.io/wcag-act/act-rules-format.html">Editor Draft</a> and <a href="https://github.com/w3c/wcag-act/">GitHub repository</a> are available for future development.</p>
-
-                    <h4 id="technical-document-format">Technical document format</h4>
-
-                    <p>The ACT Rules Format follows the W3C format for technical specifications, which includes several sections at the beginning: links to different versions, editors, copyright, abstract, and status with the link to errata and the email
-                        address for comments. Most WAI specifications have a link at the top to the Table of Contents.</p>
-
-                    <h3 id="act-rules-repository">ACT Rules Repository</h3>
-
-                    <p>Currently, W3C published the following set of rules:</p>
-
-                    <ul>
-                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-has-title-2779a5/">HTML Page has Title</a></li>
-                        <li><a href="/WAI/standards-guidelines/act/rules/image-button-accessible-name-59796f/">Image button has accessible name</a></li>
-                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-b5c3f8/">HTML page has <code class="language-plaintext highlighter-rouge">lang</code> attribute</a></li>
-                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-valid-bf051a/">HTML page language is valid</a></li>
-                        <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-xml-lang-match-5b7ae0/">HTML page lang and xml:lang attributes have matching values</a></li>
-                    </ul>
-
-                    <p>More rules are expected in the coming period. The <a href="https://www.w3.org/community/act-r/">ACT Rules Community Group</a> developed over <a href="https://act-rules.github.io/rules/">50 rules</a>, many of which will be submitted
-                        to W3C for review and approval. Other entities can also contribute candidate rules for review and approval.</p>
-
-                    <h4 id="future-of-act-rules">Future of ACT Rules</h4>
-
-                    <p>We expect more ACT Rules to be formally published by W3C as further candidate rules are contributed by the community. Contact <a href="https://www.w3.org/People/shadi/">Shadi Abou-Zahra</a> for questions on how to contribute candidate
-                        rules and participate in the review process of ACT Rules.</p>
-
-                    <h2 id="who-develops-act">Who develops ACT</h2>
-
-                    <p>The <a href="https://www.w3.org/WAI/GL/task-forces/conformance-testing/">ACT Task Force</a> of the W3C Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">AGWG</a>) develops the <a href="https://www.w3.org/TR/act-rules-format/">ACT Rules Format</a>                        specification. The ACT Task Force also reviews test rules contributed by the community in first instance. Formal publication of the ACT Rules Format specification and of ACT Rules listed on this page is made by AGWG.</p>
-
-                    <p>The <a href="https://www.w3.org/community/act-r/">ACT Rules Community Group</a> develops test rules according to the ACT Rules Format specification. These rules by the community group do not have any formal standing in the W3C process.
-                    </p>
-
-                    <p>Opportunities for contributing to ACT and other WAI work are introduced in <a href="/WAI/participation">Participating in WAI</a>.</p>
-
-                    <h2 id="additional-information">Additional information</h2>
-
-                    <p>For more information, see:</p>
-                    <ul>
-                        <li><a href="https://www.w3.org/blog/2019/10/calibrate-your-accessibility-evaluation-with-act/">Calibarate Your Accessibility Evaluation with ACT blog post</a></li>
-                        <li><a href="https://www.w3.org/blog/2019/07/harmonized-accessibility-testing/">Harmonized Accessibility Testing blog post</a></li>
-                        <li><a href="https://act-rules.github.io/">ACT Rules Community Group GitHub workspace</a></li>
-                    </ul>
-
-
+                    <p><strong>For important information about ACT Rules, please see the <a class="understanding" href="https://w3c.github.io/wcag-act/understanding-act-rules.html">Understanding ACT Rules for WCAG Success Criteria</a> section of Understanding WCAG 2.1.</strong></p>
                 </section>
+                <section id="changelog">
+                    <details>
+                        <summary>
+                            <h2>Change Log</h2>
+                        </summary>                        
+                        <p>TBD</p>
+                    </details>
+                </section>
+
+                <details>
+                    <summary>
+                        <h2>Acknowledgments</h2>
+                    </summary>
+                        <p>TBD</p>
+                        </section>
+                </details>
+
+            </section>
         </div>
     </main>
     <div class="default-grid">
