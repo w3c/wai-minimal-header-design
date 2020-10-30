@@ -1,35 +1,56 @@
 main {
-  display: block;
-  padding: 32px 0;
-  background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
+    display: block;
+    padding: 32px 0;
+    background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
 }
+
 .nav__item a {
-  display: inline-block;
+    display: inline-block;
 }
+
 .nav__item a svg {
-  vertical-align: middle;
-  height: 1em;
+    vertical-align: middle;
+    height: 1em;
 }
-.nav__item a + button {
-  margin-left: -0.75em;
-  margin-right: 1em;;
-}      
+
+.nav__item a+button {
+    margin-left: -0.75em;
+    margin-right: 1em;
+    ;
+}
+
 .tool-header {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 8;
-  -ms-grid-row: 1;
-  grid-column: 2 / 10;
-  max-height: 3em;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 8;
+    -ms-grid-row: 1;
+    grid-column: 2 / 10;
+    max-height: 3em;
 }
 
 h2 {
-      position: relative;
+    position: relative;
 }
+
 h2 .permalink {
-      position: absolute;
-      left: -1em;
+    position: absolute;
+    left: -1em;
 }
+
 h2 .permalink a {
-      color: var(--grey);
-      text-decoration: none;
+    color: var(--grey);
+    text-decoration: none;
+}
+
+h2 .fragmentlink {
+    margin-left: -1em;
+    position: relative;
+    float: left;
+}
+
+h2 .fragmentlink svg {
+    visibility: hidden;
+}
+
+h2:hover .fragmentlink svg {
+    visibility: visible;
 }
