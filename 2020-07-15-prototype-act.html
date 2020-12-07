@@ -50,12 +50,12 @@
        <p>This is an <strong>atomic rule</strong> to test <strong>2.4.2 Page Titled (Level A)</strong></p> 
       </div>
      </aside> 
-     <h2 id="description"> <a href="#description" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="description"> <a href="#description" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Description </h2> 
      <p>This rule checks that an HTML page has a title.</p> 
-     <h2 id="mapping"> <a href="#mapping" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="mapping"> <a href="#mapping" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Accessibility Requirements Mapping</h2> 
@@ -71,35 +71,35 @@
            </ul> </li> 
          </ul> 
     </details>
-     <h2 id="applicability"> <a href="#applicability" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="applicability"> <a href="#applicability" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Applicability</h2> 
      <p>The root element of the <a href="https://www.w3.org/TR/WCAG21/#dfn-web-page-s">web page</a>, if it is an <code class="highlighter-rouge">html</code> element.</p> 
      <p><strong>Note</strong>: Documents embedded into other documents, such as through <code class="highlighter-rouge">iframe</code> or <code class="highlighter-rouge">object</code> elements are not applicable because they are not web pages according to the definition in WCAG.</p> 
-     <h2 id="expectation-1"> <a href="#expectation-1" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="expectation-1"> <a href="#expectation-1" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Expectation 1</h2> 
      <p>Each target element has at least one <a href="https://dom.spec.whatwg.org/#concept-tree-descendant">descendant</a> that is an HTML <code class="highlighter-rouge">title</code> element.</p> 
      <p><strong>Note</strong>: The <code class="highlighter-rouge">title</code> element exists in other namespaces such as SVG. These are not HTML title elements and should be ignored for this rule.</p> 
      <p><strong>Note</strong>: The <a href="https://www.w3.org/TR/html52/document-metadata.html#the-title-element">HTML 5.2 specification</a> requires that a document only has one title element, and that it is a child of the head element of a document. However, HTML 5.2 also describes what should happen in case of multiple titles, and titles outside the head element. Because of this, neither of these validation issues causes a conformance problem for WCAG.</p> 
-     <h2 id="expectation-2"> <a href="#expectation-2" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="expectation-2"> <a href="#expectation-2" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Expectation 2</h2> 
      <p>For each target element, the first HTML <code class="highlighter-rouge">title</code> element that is a <a href="https://dom.spec.whatwg.org/#concept-tree-descendant">descendant</a> of the <a href="https://dom.spec.whatwg.org/#document-element">document element</a> has <a href="https://dom.spec.whatwg.org/#concept-tree-child">children</a> that are <a href="https://dom.spec.whatwg.org/#text">text nodes</a> that are not only <a href="#whitespace">whitespace</a>.</p> 
-     <h2 id="assumptions"> <a href="#assumptions" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="assumptions"> <a href="#assumptions" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Assumptions</h2> 
      <p><em>There are currently no assumptions</em></p> 
-     <h2 id="accessibility-support"> <a href="#accessibility-support" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="accessibility-support"> <a href="#accessibility-support" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Accessibility Support</h2> 
      <p><em>There are no major accessibility support issues known for this rule.</em></p> 
-     <h2 id="background"> <a href="#background" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="background"> <a href="#background" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Background</h2> 
@@ -108,7 +108,7 @@
       <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G88">G88: Providing descriptive titles for Web pages</a></li> 
       <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H25">H25: Providing a title using the title element</a></li> 
      </ul> 
-     <h2 id="test-cases"> <a href="#test-cases" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="test-cases"> <a href="#test-cases" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Test Cases</h2> 
@@ -292,7 +292,7 @@
         </ul> </li> 
       </ul> 
      </details> 
-     <h2 id="acknowledgements"> <a href="#acknowledgements" aria-hidden="true" class="fragmentlink"> 
+     <h2 id="acknowledgements"> <a href="#acknowledgements" class="fragmentlink"> 
        <svg viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> 
         <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path> 
        </svg> </a> Acknowledgements</h2> 
