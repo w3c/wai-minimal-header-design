@@ -51,6 +51,7 @@ h2 .fragmentlink svg {
     visibility: hidden;
 }
 
-h2:hover .fragmentlink svg {
+h2:hover .fragmentlink svg,
+.fragmentlink:focus svg {
     visibility: visible;
 }
