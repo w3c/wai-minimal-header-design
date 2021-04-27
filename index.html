@@ -1,33 +1,85 @@
-<h1>Redesign project: prototypes</h1>
-<h2>General</h2>
+<title>Overview - Supporting Documents Redesign Project</title>
+<style>
+    body { max-width: 70ch; line-height: 1.3; margin: 2em auto; }
+    h2 { margin-top: 2em; }
+    h3 { margin-top: 1.5em; }
+    nav::before { content: attr(aria-label) ': '; }
+</style>
+<body>
+<h1>Supporting Documents Redesign Project</h1>
+<p>In this project, we are redesigning what WCAG supporting documents look like, with the goals of making them easier to discover, navigate and apply to web projects (<a href="https://github.com/w3c/wai-wcag-supporting-documents-redesign/wiki/Requirements-Analysis">full requirements analysis</a>).
+<nav aria-label="On this page">
+    <a href="#prototypes">prototypes</a>, 
+    <a href="#features">features</a>, 
+    <a href="#open-questions">open questions</a>, 
+    <a href="#changelog">changelog</a> 
+</nav>
+<h2 id="prototypes">Prototypes</h2>
+<p>Work in progress templates</p>
+<h3 id="all-guidance">Page “All WCAG 2.1 guidance”</h3>
+<p>The supporting documents are “stand-alone” from the WAI website: they don't contain the full WAI header and navigation. To bridge between these documents and the WAI website and provide context, we will link to the WCAG documents page on the WAI website.</p>
+<p>This is where users of one document (e.g. a specific Technique) can find out which other documents exists (Techniques, Understanding, COGA Guidance, etc).
 <ul>
-    <li><a href="alt-index.html">Index page: WCAG Examples, which is on the WAI website, lists all types of examples</a>
+    <li><a href="alt-index.html">Redesigned “The Documents” page</a></li>
+    <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/docs/">Currently live “The Documents” page</a></li>
 </ul>
-<h2>Techniques</h2>
+<h3>Techniques</h3>
+<p>Some of these files are generated with XSLT using ANT from the <a href="https://github.com/w3c/wcag">WCAG repository</a>.</p>
 <ul>
     <li><a href="https://draft-wcag-redesign.netlify.app/techniques">All Techniques</a> (generated from WCAG source)</li>
-    <li><a href="2020-10-20.html">About Techniques</a></li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/techniques/about-techniques/">About Techniques (generated from WCAG source)</a></li>
     <li><a href="https://draft-wcag-redesign.netlify.app/techniques/css/c6">Example of Technique - C6</a> (generated from WCAG source)</li>
-    <li><a href="2020-09-22-technique-and.html">Example Technique (AND)</a></li>
-    <li><a href="2020-07-15-prototype-failure.html">Example Technique (Failure)</a></li>
-    <li><a href="2020-09-22-technique-advisory.html">Example Technique (Advisory)</a></li>
+    <li><a href="2020-09-22-technique-and.html">Example Technique (AND)</a> (prototype; need to find way to add “if combined” sentence)</li>
+    <li><a href="2020-07-15-prototype-failure.html">Example Technique (Failure)</a> (prototype; need to find way to establish technique is of the “Failure” kind)</li>
+    <li><a href="2020-09-22-technique-advisory.html">Example Technique (Advisory)</a> (prototype; need to find way to establish technique is of the “Advisory” kind)</li>
 </ul>
-<h2>Understanding documents</h2>
+<h3>Understanding documents</h3>
+<p>Some of these files are generated with XSLT using ANT from the <a href="https://github.com/w3c/wcag">WCAG repository</a>.</p>
 <ul>
     <li><a href="https://draft-wcag-redesign.netlify.app/understanding">All Understanding pages</a> (generated from WCAG source)</li>
-    <li><a href="2020-10-21.html">About Understanding pages</a></li>
-    <li><a href="2020-07-15-prototype-understanding.html">Example of Understanding page</a></li>
-    <li><a href="2020-07-15-prototype-understanding-longer-sc.html">Example of Understanding with long SC and scenarios</a></li>
-    <li><a href="2020-07-15-prototype-understanding-quote.html">Example of Understanding with quote</a></li>
-    <li><a href="2020-07-15-prototype-understanding-quote-video.html">Example of Understanding with quote and video</a></li>
+    <li><a href="2020-10-21.html">About Understanding pages</a> (prototype; need to copy text over)</li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/captions-prerecorded">Example of Understanding page</a> (generated from WCAG source)</li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/non-text-content">Example of Understanding with long SC and scenarios</a> (generated from WCAG source)</li>
+    <li id="quote"><a href="2020-07-15-prototype-understanding-quote.html">Example of Understanding with quote</a> (prototype: need to decide on adding user quotes to these documents)</li>
+    <li id="video"><a href="2020-07-15-prototype-understanding-quote-video.html">Example of Understanding with quote and video</a> (prototype: need to decide on adding videos to these documents)</li>
 </ul>
-<h2>ACT Rules</h2>
+<h3>ACT Rules</h3>
+<p>All of these files are generated from Markdown files in <a href="https://github.com/w3c/wcag-act-rules/">wcag-act-rules</a>, a WAI Website style repository, in the <a href="https://github.com/w3c/wcag-act-rules/tree/use-supporting-docs-template">use-supporting-docs-template</a> branch, using the <a href="https://wai-website-theme.netlify.app/writing/supporting-documents/">stand-alone document layout</a>. <a href="https://github.com/w3c/wcag-act-rules/pull/51">PR 51</a> moves the files to this layout.</p>
 <ul>
-    <li><a href="2020-10-13-all-act.html">All ACT Rules</a></li>
-    <li><a href="2020-10-20-about-act.html">About ACT Rules</a></li>
-    <li><a href="2020-07-15-prototype-act.html">Example of ACT Rule</a></li>
+    <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/">All ACT Rules</a> (generated from <a href="https://github.com/w3c/wcag-act-rules/pull/51">ACT Rules source</a>)</li>
+    <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/about/">About ACT Rules</a></li>
+    <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/image-button-accessible-name-59796f/">Example of ACT Rule</a></li>
 </ul>
-<h2>COGA Design Patterns</h2>
+<h3>COGA Design Patterns</h3>
+<p>All of these files are generated from Markdown files in <a href="https://github.com/w3c/wai-coga-design-guide/">wai-coga-design-guide</a>, a WAI Website style repository, using the <a href="https://wai-website-theme.netlify.app/writing/supporting-documents/">stand-alone document layout</a>.</p>
 <ul>
-    <li><a href="2020-07-15-coga.html">Example of COGA design pattern</a></li>
+    <li><a href="https://wai-coga-design-guide.netlify.app/patterns/">All COGA patterns</a></li>
+    <li><a href="https://wai-coga-design-guide.netlify.app/patterns/controls-do-not-move/">Example of COGA design pattern</a></li>
+    <li><a href="https://wai-coga-design-guide.netlify.app/objectives/what-things-are/">Example of COGA objective</a></li>
+    <li><a href="https://wai-coga-design-guide.netlify.app/about/">About the COGA design guide</a></li>
 </ul>
+<h2 id="features">Features</h2>
+<p>A short explanation of how we try address specific user needs (see also <a href="https://github.com/w3c/wai-wcag-supporting-documents-redesign/wiki/Current-user-flows">user flows</a>, about current user flows and potential issues)
+<dl>
+    <dt>User: I want to find out which other documents exist</dt>
+    <dd>All documents link to <a href="#all-guidance">all guidance</a> page</dd>
+    <dt>User: I want to find out which set this document is part of</dt>
+    <dd>Blue header at the top has name of the set of documents, for instance “WCAG 2.1 Techniques”. </dd>
+    <dt>User: I want to know what kind of document I am looking at</dt>
+    <dd>Sidebar contains short sentence that explains the kind of document, for instance “Techniques are examples of ways to meet a WCAG success criterion.”, and there is a link to “About Techniques” in the top navigation.</dd> 
+    <dt>User: I want to know if the document is “required” (normative or informative)</dt>
+    <dd>This should be clear from the sidebar sentence, can be further explained in the “About” page linked from the header.</dd>
+    <dt>User: I want to know if guidance is accurate / recent</dt>
+    <dd>@@TODO@@ Banner to be displayed if guidance is outdated</dd>
+</dl>
+<h2 id="open-questions">Open questions</h2>
+<ul>
+    <li>Will we add user quotes to Understanding documents? (see <a href="#quote">prototype with quote</a>)</li>
+    <li>Will we add videos to Understanding documents? (see <a href="#video">prototype with quote</a>)</li>
+    <li>Can we generate WCAG documents so that Failure and “if combined” information can be printed in the template as designed?</li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<ul>
+    <li>27 April 2021: removed links to old examples; added context and overview of features</li>
+</ul>
+</body>
