@@ -10,12 +10,12 @@
 <h1>Supporting Documents Redesign Project</h1>
 <p>In this project, we are redesigning what WCAG supporting documents look like, with the goals of making them easier to discover, navigate and apply to web projects (<a href="https://github.com/w3c/wai-wcag-supporting-documents-redesign/wiki/Requirements-Analysis">full requirements analysis</a>).
 <nav aria-label="On this page">
-    <a href="#prototypes">prototypes</a>, 
+    <a href="#prototypes">prototypes and templates</a>, 
     <a href="#features">features</a>, 
     <a href="#open-questions">open questions</a>, 
     <a href="#changelog">changelog</a> 
 </nav>
-<h2 id="prototypes">Prototypes</h2>
+<h2 id="prototypes">Prototypes and templates</h2>
 <p>Work in progress templates</p>
 <h3 id="all-guidance">Page “All WCAG 2.1 guidance”</h3>
 <p>The supporting documents are “stand-alone” from the WAI website: they don't contain the full WAI header and navigation. To bridge between these documents and the WAI website and provide context, we will link to the WCAG documents page on the WAI website.</p>
@@ -25,29 +25,37 @@
     <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/docs/">Currently live “The Documents” page</a></li>
 </ul>
 <h3>Techniques</h3>
+<h4>Generated</h4>
 <p>Some of these files are generated with XSLT using ANT from the <a href="https://github.com/w3c/wcag">WCAG repository</a>.</p>
 <ul>
-    <li><a href="https://draft-wcag-redesign.netlify.app/techniques">All Techniques</a> (generated from WCAG source)</li>
-    <li><a href="https://draft-wcag-redesign.netlify.app/techniques/about-techniques/">About Techniques (generated from WCAG source)</a></li>
-    <li><a href="https://draft-wcag-redesign.netlify.app/techniques/css/c6">Example of Technique - C6</a> (generated from WCAG source)</li>
-    <li><a href="2020-09-22-technique-and.html">Example Technique (AND)</a> (prototype; need to find way to add “if combined” sentence)</li>
-    <li><a href="2020-07-15-prototype-failure.html">Example Technique (Failure)</a> (prototype; need to find way to establish technique is of the “Failure” kind)</li>
-    <li><a href="2020-09-22-technique-advisory.html">Example Technique (Advisory)</a> (prototype; need to find way to establish technique is of the “Advisory” kind)</li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/techniques">All Techniques</a></li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/techniques/about-techniques/">About Techniques</a></li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/techniques/css/c6">Example of Technique - C6</a></li>
+</ul>
+<h4>Prototypes</h4>
+<ul>
+    <li><a href="2020-09-22-technique-and.html">Example Technique (AND)</a> (need to find way to add “if combined” sentence)</li>
+    <li><a href="2020-07-15-prototype-failure.html">Example Technique (Failure)</a> (need to find way to establish technique is of the “Failure” kind)</li>
+    <li><a href="2020-09-22-technique-advisory.html">Example Technique (Advisory)</a> (need to find way to establish technique is of the “Advisory” kind)</li>
 </ul>
 <h3>Understanding documents</h3>
+<h4>Generated</h4>
 <p>Some of these files are generated with XSLT using ANT from the <a href="https://github.com/w3c/wcag">WCAG repository</a>.</p>
 <ul>
-    <li><a href="https://draft-wcag-redesign.netlify.app/understanding">All Understanding pages</a> (generated from WCAG source)</li>
-    <li><a href="2020-10-21.html">About Understanding pages</a> (prototype; need to copy text over)</li>
-    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/captions-prerecorded">Example of Understanding page</a> (generated from WCAG source)</li>
-    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/non-text-content">Example of Understanding with long SC and scenarios</a> (generated from WCAG source)</li>
-    <li id="quote"><a href="2020-07-15-prototype-understanding-quote.html">Example of Understanding with quote</a> (prototype: need to decide on adding user quotes to these documents)</li>
-    <li id="video"><a href="2020-07-15-prototype-understanding-quote-video.html">Example of Understanding with quote and video</a> (prototype: need to decide on adding videos to these documents)</li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/understanding">All Understanding pages</a></li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/captions-prerecorded">Example of Understanding page</a></li>
+    <li><a href="https://draft-wcag-redesign.netlify.app/understanding/non-text-content">Example of Understanding with long SC and scenarios</a></li>
+</ul>
+<h4>Prototypes</h4>
+<ul>
+    <li><a href="2020-10-21.html">About Understanding pages</a> (need to copy text over)</li>
+    <li id="quote"><a href="2020-07-15-prototype-understanding-quote.html">Example of Understanding with quote</a> (need to decide on adding user quotes to these documents)</li>
+    <li id="video"><a href="2020-07-15-prototype-understanding-quote-video.html">Example of Understanding with quote and video</a> (need to decide on adding videos to these documents)</li>
 </ul>
 <h3>ACT Rules</h3>
 <p>All of these files are generated from Markdown files in <a href="https://github.com/w3c/wcag-act-rules/">wcag-act-rules</a>, a WAI Website style repository, in the <a href="https://github.com/w3c/wcag-act-rules/tree/use-supporting-docs-template">use-supporting-docs-template</a> branch, using the <a href="https://wai-website-theme.netlify.app/writing/supporting-documents/">stand-alone document layout</a>. <a href="https://github.com/w3c/wcag-act-rules/pull/51">PR 51</a> moves the files to this layout.</p>
 <ul>
-    <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/">All ACT Rules</a> (generated from <a href="https://github.com/w3c/wcag-act-rules/pull/51">ACT Rules source</a>)</li>
+    <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/">All ACT Rules</a></li>
     <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/about/">About ACT Rules</a></li>
     <li><a href="https://deploy-preview-51--wcag-act-rules.netlify.app/standards-guidelines/act/rules/image-button-accessible-name-59796f/">Example of ACT Rule</a></li>
 </ul>
