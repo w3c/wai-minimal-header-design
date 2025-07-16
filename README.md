@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> This repository has been archived 17 July 2025.
+>
+> The WAI website design is now edited in the [wai-website-theme](https://github.com/w3c/wai-website-theme) repository.
+
 Resources using this design:
 * [Supplemental Guidance to WCAG 2](https://www.w3.org/WAI/WCAG2/supplemental/)
 * [WCAG 2 Test Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/about/)
